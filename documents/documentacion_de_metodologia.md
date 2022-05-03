@@ -26,9 +26,8 @@
 #### Indice de contenidos.
 
 1. [Descripción del Escenario](#descripción-del-escenario)
-   
-    1. [Requerimientos](#requerimientos)
-
+    1. [Entrevistas y Cuestionarios](#entrevistas-y-cuestionarios)
+    2. [Requerimientos](#requerimientos)
 2. 
 
 
@@ -51,6 +50,10 @@ Cada casa tiene un estudiante becado avanzado (mínimamente lleva un año como b
 Cada estudiante becado tiene que cumplir con las normas de convivencia y el reglamento de los albergues universitarios, y además, estar dispuesto a prestar ayuda en la limpieza y mantenimiento básico de los albergues (limpieza de la casa, asistir en jornadas de limpieza general, asistir a días previamente designados para pintar las casas, colaborar con el mantenimiento de los patios) aunque no es obligatorio, finalmente, aunque la beca de albergue es gratuita, el pago de servicios de luz y agua es dividido por el numero de integrantes de cada casa y esto también aplica a servicios terceros no incluidos, como por ejemplo el contrato particular de Internet por parte de algún miembro de la casa. 
  
 Cada casa cuenta con muebles y electrodomésticos propiedad de la universidad que pueden ser utilizados pero no sustraídos de las mismas bajo ningún concepto. Cada estudiante puede llevar efectos personales, equipaje, muebles tales como estantes, escritorios, electrodomésticos, etc. Sin embargo, bienes tales como heladeras, cocinas a gas, hornos eléctricos, cafeteras eléctricas u otros que se dispongan en la cocina comedor deben ser de uso compartido por todos los estudiantes, teniendo conocimiento de esto el alumno becado dueño del bien y estando bajo toda la casa de becados la responsabilidad del uso y cuidado del mismo.
+
+## Entrevistas y Cuestionarios.
+
+
 
 ## Requerimientos.
 
