@@ -26,6 +26,10 @@
 #### Indice de contenidos.
 
 1. [Descripción del Escenario](#descripción-del-escenario)
+   
+    1. [Requerimientos](#requerimientos)
+
+2. 
 
 
 ---
@@ -48,3 +52,22 @@ Cada estudiante becado tiene que cumplir con las normas de convivencia y el regl
  
 Cada casa cuenta con muebles y electrodomésticos propiedad de la universidad que pueden ser utilizados pero no sustraídos de las mismas bajo ningún concepto. Cada estudiante puede llevar efectos personales, equipaje, muebles tales como estantes, escritorios, electrodomésticos, etc. Sin embargo, bienes tales como heladeras, cocinas a gas, hornos eléctricos, cafeteras eléctricas u otros que se dispongan en la cocina comedor deben ser de uso compartido por todos los estudiantes, teniendo conocimiento de esto el alumno becado dueño del bien y estando bajo toda la casa de becados la responsabilidad del uso y cuidado del mismo.
 
+## Requerimientos.
+
+volver al [Indice](#indice-de-contenidos)
+
+### Definición de requerimientos del usuario.
+
+|  Requerimientos del usuario |
+|           :---              |
+|1. |
+|2. |
+|3. |
+
+### Especificación de los requerimientos del sistema.
+
+|  Requerimientos del sistema |
+|           :---              |
+|1. |
+|2. |
+|3. |
