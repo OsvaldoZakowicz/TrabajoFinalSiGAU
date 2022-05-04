@@ -22,6 +22,9 @@ Homestead.json
 /.vagrant
 .phpunit.result.cache
 
+#Main folder
+commits_guide.md
+
 # Documents folder
 # Ignorando archivos backup y lock de visual paradigm
 *.bak_*
