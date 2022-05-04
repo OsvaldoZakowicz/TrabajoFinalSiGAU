@@ -5,6 +5,7 @@
 #### Indice de contenidos.
 
 1. [Primera entrevista, Sr Sotelo Carlos Adrian.](#primera-entrevista-sr-sotelo-carlos-adrian)
+2. [Primera entrevista, Sr Ayala Fabricio](#primera-entrevista-sr-ayala-fabricio)
 
 ---
 
@@ -104,3 +105,58 @@
 *A: 1. Que se envíen realmente los documentos solicitados.*
 
 ---
+
+## Primera Entrevista, Sr Ayala Fabricio.
+
+Volver al [Indice](#indice-de-contenidos)
+
+**Motivo:** Beca de Albergue.
+
+**Entrevistado:** Encargado de Albergues del Módulo Apóstoles FCEQyN Sr. Ayala Fabricio.
+
+**Objetivo:** Obtener nformación de relevamiento para el Sistema de Gestión de Albergues Universitarios (SiGAU) para el Módulo Apóstoles.
+
+### Preguntas y respuestas:
+
+> **Q: Luego del cierre de el formulario de solicitud de la beca de albergue, ¿Cúal es la presentación en la que recibe los datos de cada estudiante interesado? (formato impreso, planilla de calculos...)**
+
+*A: En formato impreso.*
+
+> **Q: ¿Considera que la presentación de los datos de cada estudiante tal, como la recibe, es clara y legible?.**
+
+*A: Es poco legible.*
+
+> **Q: ¿Alguna vez tuvo que reorganizar las solicitudes de una forma que le resulten mas comprensibles? por ejemplo, agrupar solicitudes que cumplen requisitos o las que no cumplen, marcar solicitudes para diferenciarlas de otras.**
+
+*A: Si.*
+
+> **Q: ¿La información de cada Estudiante que solicitó la beca fue suficiente como para decidir la aceptación de la solicitud? ¿Alguna vez tuvo que solicitar información extra al estudiante?, si es así, ¿Cual?.**
+
+*A: Si, la información solicitada es suficiente. Sin embargo, muchas veces una solicitud viene acompañada de documentación subida que es erronea o diferente a la esperada, entonces se debe volver a pedir por ejemplo el recibo de sueldo o constancia de domicilio.*
+
+> **Q: ¿Qué información observa primero en cada solicitud de beca?.**
+
+*A: Lugar de procedencia y situación socio-económica*
+
+> **Q: ¿Existen características de una solicitud de beca que la hacen prioritaria?, es decir, existen Estudiantes con prioridad para ser becados?**
+
+*A: Dado el cupo limitado de becas que se pueden asignar, resultan prioritarias las solicitudes de estudiantes que proceden de lugares lejanos y/o zonas rurales lejanas*
+
+> **Q: ¿Cuales son las características que hacen de una solicitud de beca prioritaria?, siéntase libre de enumerarlas.**
+
+*A:*
+
+1. *Nivel socio-económico bajo.*
+2. *Distancia entre la ciudad de Apóstoles y el domicilio de procedencia del estudiante.*
+3. *Pertenecer a una localidad o paraje de poco acceso a servicios.*
+
+> **Q:  Una vez un estudiante es becado, ¿Como se procede con el mismo?, ¿Podría realizar una breve descripción?.**
+
+*A: Se procede a notificarlo y a realizar un trámite de becado efectivo.*
+
+> **Q: Desde el proceso de análisis de las solicitudes, hasta el becado efectivo de estudiantes y su asignación a una casa y habitación, ¿Que problemas comunes podrían surgir?, sientase libre de enumerarlos.**
+
+*A:*
+
+1. *No saber la cantidad exacta de becados que ya existen en los albergues.*
+2. *No saber la cantidad exacta de lugares disponibles en los albergues.*
