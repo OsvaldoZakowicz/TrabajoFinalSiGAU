@@ -51,6 +51,8 @@ Cada estudiante becado tiene que cumplir con las normas de convivencia y el regl
  
 Cada casa cuenta con muebles y electrodomésticos propiedad de la universidad que pueden ser utilizados pero no sustraídos de las mismas bajo ningún concepto. Cada estudiante puede llevar efectos personales, equipaje, muebles tales como estantes, escritorios, electrodomésticos, etc. Sin embargo, bienes tales como heladeras, cocinas a gas, hornos eléctricos, cafeteras eléctricas u otros que se dispongan en la cocina comedor deben ser de uso compartido por todos los estudiantes, teniendo conocimiento de esto el alumno becado dueño del bien y estando bajo toda la casa de becados la responsabilidad del uso y cuidado del mismo.
 
+volver al [principio](#descripción-del-escenario)
+
 ## Entrevistas y Cuestionarios.
 
 volver al [Indice](#indice-de-contenidos)
@@ -64,7 +66,7 @@ volver al [Indice](#indice-de-contenidos)
 ### Definición de requerimientos del usuario.
 
 |  **Requerimientos del usuario** |
-|              :---               |
+|:--------------------------------|
 |1. SiGAU controlará las solicitudes de estudiantes para la beca de albergue, los datos y documentos que se deben adjuntar y la pre-selección de solicitudes.|
 |2. SiGAU mantendrá registrada cada casa de la beca, cada becado y lugares libres en cada casa.|
 |3. SiGAU se encargará de planificar la limpieza de cada casa de la beca para cada becado.|
@@ -76,7 +78,7 @@ volver al [Indice](#indice-de-contenidos)
 ### Especificación de los requerimientos del sistema.
 
 |  **Requerimientos del sistema, apartado 1.** |
-| :---  |
+|:---------------------------------------------|
 |1.1 SiGAU Proporcionará un registro para usuarios estudiantes.|
 |1.2 SiGAU Proporcionará un formulario de solicitud para los estudiantes registrados que tomará todos los datos de solicitud personales, académicos, socio-económicos, familiares  y permitirá subir archivos en formato PDF, imagen o documento de texto.|
 |1.3 SiGAU Encriptará los datos personales y documentacion de cada estudiante en la base de datos.|
@@ -84,7 +86,7 @@ volver al [Indice](#indice-de-contenidos)
 |1.5 SiGAU no debe permitir que se realice una solicitud hasta que se adjunten los documentos requeridos en cada apartado del formulario de solicitud en el formato adecuado.|
 
 | **Requerimientos del sistema, apartado 2.** |
-| :--- |
+|:--------------------------------------------|
 |2.1 SiGAU permitirá registrar cada casa de la beca de albergue, el numero de habitaciones y de camas por habitación.|
 |2.2 SiGAU permitirá registrar cada usuario que resulte beneficiado por la beca como un becado en una casa, asignándole habitación y cama.|
 |2.3 SiGAU mantendrá un registro con los lugares libres de cada casa por habitación.|
@@ -92,7 +94,7 @@ volver al [Indice](#indice-de-contenidos)
 |2.5 Si ya no existen lugares libres en una casa, SiGAU no debe permitir que se asigue una beca de albergue a un estudiante para dicha casa.|
 
 | **Requerimientos del sistema, apartado 3** |
-| :--- |
+|:-------------------------------------------|
 |3.1 SiGAU mantendrá un listado de áreas que deben ser mantenidas limpias para cada casa, su nivel de prioridad, y el plazo de planificación en que debe cumplirse cada tarea.|
 |3.2 SiGAU planificará en un calendario para cada becado de cada casa una o mas tareas de limpieza que se deben completar en un tiempo (5, 7, 10 dias).|
 |3.3 SiGAU permitira que cada becado envié una o mas imagenes (fotos) del área o áreas que limpió para que sea calificada por los demás integrantes de la casa  (calificación del 1 "mal" al 10 "perfecto").|
@@ -100,13 +102,13 @@ volver al [Indice](#indice-de-contenidos)
 |3.5 En caso de que no se estén cumpliendo las tareas en tiempo y forma, SiGAU propondrá resolver tareas por equipos o en otros horarios diferentes.|
 
 | **Requerimientos del sistema, apartado 4** |
-|  :---  |
+|:-------------------------------------------|
 |4.1 SiGAU planificará en un calendario para cada casa el período en el que se espera paguen los servicios de luz y agua, este período de timpo va desde el inicio del mes hasta un tiempo aproximado en que llegan las boletas (1 al 15 de cada mes).|
 |4.2 Por cada servicio, SiGAU esperará a que al final del período se suban los datos de identificación de la boleta de servicio pagada, para que la planificación del mes se considere cumplida. SiGAU no debe permitir que una planificación de pago se omita al no subir las boletas pagadas.|
 |4.3 SiGAU no debe permitir que se suban boletas ya registradas, o en un formato inadecuado.|
 
 | **Requerimientos del sistema, apartado 5** |
-|  :---  |
+|:-------------------------------------------|
 |5.1 SiGAU permitirá que cada becado pueda realizar una solicitud de mantenimiento sobre algún área en presunto desperfecto en la casa donde habita.|
 |5.2 Por cada solicitud de mantenimiento, SiGAU establecerá un trabajo pendiente a resolver, marcándo esta solicitud como abierta.|
 |5.3 SiGAU permitirá que cada solicitud de mantenimiento pueda luego establecerse como cerrada por el solicitante o el encargado de albergues cuando se encuentre cumplida.|
@@ -114,7 +116,7 @@ volver al [Indice](#indice-de-contenidos)
 |5.5 En caso de que una o mas solicitudes de mantenimiento no se puedan cumplir en la jornada, se moverán a la siguiente jornada que se planifique.|
 
 | **Requerimientos del sistema, apartado 6** |
-|  :---  |
+|:-------------------------------------------|
 |6.1 SiGAU mantendrá un sistema de puntajes y beneficios para cada becado con el objetivo de motivar a la realización de la limpieza y pago de servicios en tiempo y forma.|
 |6.2 Por cada tarea que se cumpla en tiempo y se califique por los demás becados de una casa y por el pago a tiempo de los servicios se influirá de forma positiva o negativa en el puntaje del becado responsable de la tarea, de la siguiente forma:|
 |6.2.1 Un becado con un periodo de tiempo de buen puntaje llegando a un determinado nivel será bonificado estando libre de tareas en la siguiente planificación de limpieza, esto es obtenible una sola vez, luego debe mantener buen puntaje hasta poder calificar nuevamente. Si ademas es delegado de la casa, al llegar a un buen nivel de puntaje 3 veces seguidas obtendrá un beneficio exclusivo para elegir una planificación en la que no quiere estar (puede elegir en que planificación estar libre).|
@@ -122,10 +124,12 @@ volver al [Indice](#indice-de-contenidos)
 |6.2.3 Si todos los becados tienen buen nivel en puntaje, se descontará una tarea poco critica. de la planificación de limpieza y cada uno de ellos tendrá una semana libre.|
 
 | **Requerimientos del sistema, apartado 7** |
-|  :---  |
+|:-------------------------------------------|
 |7.1 Para el perfil de administrador, SiGAU tendrá todos sus modulos y apartados visibles y configurables. Excepto el apartado de Auditoría.|
 |7.2 El perfil de Auditor solo podrá acceder al apartado de auditoria.|
 |7.3 El perfil del secretario de bienestar estudiantil tendrá acceso a el módulo de beca, casa y becados.|
 |7.4 El perfil del encargado de albergues tendrá acceso a los modulos de beca, casa, becados, mantenimiento y planificaciones|
 |7.5 El perfil de estudiante tendrá acceso a la solictud de la beca, y el perfil de becado a su cuenta personal.|
 |7.6 SiGAU no debe permitir el acceso de un perfil a un apartado que no le corresponde.|
+
+volver al [principio](#requerimientos)
