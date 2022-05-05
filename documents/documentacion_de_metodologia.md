@@ -71,6 +71,7 @@ volver al [Indice](#indice-de-contenidos)
 |4. SiGAU se encargará de mantener seguimiento sobre el pago de servicios domesticos de cada casa de la beca, resguardando las boletas y comprobantes de pago.|
 |5. SiGAU permitirá registrar solicitudes de mantenimiento, y planificar jornadas de mantenimiento en las casas de la beca.|
 |6. SiGAU mantendra un sistema de puntajes para cada becado según estos cumplan sus tareas de limpieza y de pago de cuentas a tiempo y en forma, luego usará el puntaje de cada becado para darle un beneficio o asignarle una sancion.|
+|7. SiGAU mantendrá perfiles de usuario, para un administrador general, un auditor, el secretario de bienestar estudiantil, el encargado de albergues, estudiantes y becados, cada perfil tendrá cierto nivel de permisos y acceso a ciertas partes del sistema.|
 
 ### Especificación de los requerimientos del sistema.
 
@@ -119,3 +120,12 @@ volver al [Indice](#indice-de-contenidos)
 |6.2.1 Un becado con un periodo de tiempo de buen puntaje llegando a un determinado nivel será bonificado estando libre de tareas en la siguiente planificación de limpieza, esto es obtenible una sola vez, luego debe mantener buen puntaje hasta poder calificar nuevamente. Si ademas es delegado de la casa, al llegar a un buen nivel de puntaje 3 veces seguidas obtendrá un beneficio exclusivo para elegir una planificación en la que no quiere estar (puede elegir en que planificación estar libre).|
 |6.2.2 Un becado con un nivel de mal puntaje será planificado con una tarea extra de limpieza (de entre varias tareas extra a las planificadas normalmente), al completar ambas tareas bien calificadas puede mejorar su puntaje general. Si además es delegado de la casa, al llegar a un mal nivel 3 veces, el sistema tomará el siguiente candidato con mayor puntaje para proponerle ser delegado. Puede rechazar ser delegado, el sistema tomará el siguiente becado con mejor puntaje y le hará la misma propuesta.|
 |6.2.3 Si todos los becados tienen buen nivel en puntaje, se descontará una tarea poco critica. de la planificación de limpieza y cada uno de ellos tendrá una semana libre.|
+
+| **Requerimientos del sistema, apartado 7** |
+|  :---  |
+|7.1 Para el perfil de administrador, SiGAU tendrá todos sus modulos y apartados visibles y configurables. Excepto el apartado de Auditoría.|
+|7.2 El perfil de Auditor solo podrá acceder al apartado de auditoria.|
+|7.3 El perfil del secretario de bienestar estudiantil tendrá acceso a el módulo de beca, casa y becados.|
+|7.4 El perfil del encargado de albergues tendrá acceso a los modulos de beca, casa, becados, mantenimiento y planificaciones|
+|7.5 El perfil de estudiante tendrá acceso a la solictud de la beca, y el perfil de becado a su cuenta personal.|
+|7.6 SiGAU no debe permitir el acceso de un perfil a un apartado que no le corresponde.|
