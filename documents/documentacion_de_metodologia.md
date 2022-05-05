@@ -68,9 +68,9 @@ volver al [Indice](#indice-de-contenidos)
 |1. SiGAU controlará las solicitudes de estudiantes para la beca de albergue, los datos y documentos que se deben adjuntar y la pre-selección de solicitudes.|
 |2. SiGAU mantendrá registrada cada casa de la beca, cada becado y lugares libres en cada casa.|
 |3. SiGAU se encargará de planificar la limpieza de cada casa de la beca para cada becado.|
-|4. SiGAU se encargará de mantener seguimiento sobre el pago de servicios domesticos de cada casa de la beca, resguardando las boletas y comprobantes de pago en formato imagen o PDF.|
+|4. SiGAU se encargará de mantener seguimiento sobre el pago de servicios domesticos de cada casa de la beca, resguardando las boletas y comprobantes de pago.|
 |5. SiGAU permitirá registrar solicitudes de mantenimiento, y planificar jornadas de mantenimiento en las casas de la beca.|
-|6. SiGAU mantendra un sistema de puntajes para cada becado según estos cumplan sus tareas de limpieza y de pago de cuentas a tiempo y en forma, luego usará este puntaje para decidir sobre cada planificación de limpieza siguiente.|
+|6. SiGAU mantendra un sistema de puntajes para cada becado según estos cumplan sus tareas de limpieza y de pago de cuentas a tiempo y en forma, luego usará el puntaje de cada becado para darle un beneficio o asignarle una sancion.|
 
 ### Especificación de los requerimientos del sistema.
 
@@ -84,34 +84,38 @@ volver al [Indice](#indice-de-contenidos)
 
 | **Requerimientos del sistema, apartado 2.** |
 | :--- |
-|2.1 SiGAU permitirá registrar cada casa de la beca de albergue, el numero de habitaciones y de camas.|
-|2.2 SiGAU permitirá registrar cada usuario que resulte beneficiado por la beca como un becado en una casa.|
+|2.1 SiGAU permitirá registrar cada casa de la beca de albergue, el numero de habitaciones y de camas por habitación.|
+|2.2 SiGAU permitirá registrar cada usuario que resulte beneficiado por la beca como un becado en una casa, asignándole habitación y cama.|
 |2.3 SiGAU mantendrá un registro con los lugares libres de cada casa por habitación.|
 |2.4 A medida que se ocupen o liberen espacios en los albegrues, SiGAU mantendrá actualizada la cantidad de lugares libres.|
+|2.5 Si ya no existen lugares libres en una casa, SiGAU no debe permitir que se asigue una beca de albergue a un estudiante para dicha casa.|
 
 | **Requerimientos del sistema, apartado 3** |
 | :--- |
-|3.1 SiGAU mantendrá un listado de áreas que deben ser mantenidas limpias para cada casa, y el plazo en que debe cumplirse cada tarea planificada.|
-|3.2 SiGAU planificará en un calendario para cada becado de cada casa una o mas tareas de limpieza que se deben completar en tiempo y forma.|
-|3.3 SiGAU permitira que cada becado envié una o mas imagenes (fotos) del área o áreas que limpió para que sea calificada por los demás integrantes de la casa.|
+|3.1 SiGAU mantendrá un listado de áreas que deben ser mantenidas limpias para cada casa, su nivel de prioridad, y el plazo de planificación en que debe cumplirse cada tarea.|
+|3.2 SiGAU planificará en un calendario para cada becado de cada casa una o mas tareas de limpieza que se deben completar en un tiempo (5, 7, 10 dias).|
+|3.3 SiGAU permitira que cada becado envié una o mas imagenes (fotos) del área o áreas que limpió para que sea calificada por los demás integrantes de la casa  (calificación del 1 "mal" al 10 "perfecto").|
+|3.4 SiGAU re-planificará las tareas asignadas en un período de tiempo cuando se incluya un nuevo becado en una casa o cuando se quite un becado de una casa.|
+|3.5 En caso de que no se estén cumpliendo las tareas en tiempo y forma, SiGAU propondrá resolver tareas por equipos o en otros horarios diferentes.|
 
 | **Requerimientos del sistema, apartado 4** |
 |  :---  |
-|4.1 SiGAU planificará en un calendario para cada casa el período en el que se espera paguen los servicios de luz y agua.|
-|4.2 Por cada servicio, SiGAU esperará a que al final del período se suban los datos de identificación de la boleta de servicio pagada. SiGAU no debe permitir que una planificación de pago se omita o no se suban las boletas pagadas.|
+|4.1 SiGAU planificará en un calendario para cada casa el período en el que se espera paguen los servicios de luz y agua, este período de timpo va desde el inicio del mes hasta un tiempo aproximado en que llegan las boletas (1 al 15 de cada mes).|
+|4.2 Por cada servicio, SiGAU esperará a que al final del período se suban los datos de identificación de la boleta de servicio pagada, para que la planificación del mes se considere cumplida. SiGAU no debe permitir que una planificación de pago se omita al no subir las boletas pagadas.|
 |4.3 SiGAU no debe permitir que se suban boletas ya registradas, o en un formato inadecuado.|
 
 | **Requerimientos del sistema, apartado 5** |
 |  :---  |
 |5.1 SiGAU permitirá que cada becado pueda realizar una solicitud de mantenimiento sobre algún área en presunto desperfecto en la casa donde habita.|
 |5.2 Por cada solicitud de mantenimiento, SiGAU establecerá un trabajo pendiente a resolver, marcándo esta solicitud como abierta.|
-|5.3 SiGAU permitirá que cada solicitud de mantenimiento pueda luego establecerse como cerrada por el solicitante cuando se encuentre cumplida.|
+|5.3 SiGAU permitirá que cada solicitud de mantenimiento pueda luego establecerse como cerrada por el solicitante o el encargado de albergues cuando se encuentre cumplida.|
 |5.4 SiGAU permitirá que el encargado de albergue planifique jornadas de mantenimiento e incluya en ellas solicitudes de mantenimiento a resolver, luego informará de esto a todos los becados.|
 |5.5 En caso de que una o mas solicitudes de mantenimiento no se puedan cumplir en la jornada, se moverán a la siguiente jornada que se planifique.|
 
 | **Requerimientos del sistema, apartado 6** |
 |  :---  |
 |6.1 SiGAU mantendrá un sistema de puntajes y beneficios para cada becado con el objetivo de motivar a la realización de la limpieza y pago de servicios en tiempo y forma.|
-|6.2 Por cada tarea que se cumpla y califique, se influirá de forma positiva o negativa en el puntaje del becado responsable de la tarea.|
-|6.3 Cada vez que un becado alcance cierto nivel de buen puntaje, recibirá un beneficio o un castigo en la siguiente planificación.|
-|6.4 SiGAU usará el puntaje de un becado para hacerlo candidato a delegado de la casa en la que habita.|
+|6.2 Por cada tarea que se cumpla en tiempo y se califique por los demás becados de una casa y por el pago a tiempo de los servicios se influirá de forma positiva o negativa en el puntaje del becado responsable de la tarea, de la siguiente forma:|
+|6.2.1 Un becado con un periodo de tiempo de buen puntaje llegando a un determinado nivel será bonificado estando libre de tareas en la siguiente planificación de limpieza, esto es obtenible una sola vez, luego debe mantener buen puntaje hasta poder calificar nuevamente. Si ademas es delegado de la casa, al llegar a un buen nivel de puntaje 3 veces seguidas obtendrá un beneficio exclusivo para elegir una planificación en la que no quiere estar (puede elegir en que planificación estar libre).|
+|6.2.2 Un becado con un nivel de mal puntaje será planificado con una tarea extra de limpieza (de entre varias tareas extra a las planificadas normalmente), al completar ambas tareas bien calificadas puede mejorar su puntaje general. Si además es delegado de la casa, al llegar a un mal nivel 3 veces, el sistema tomará el siguiente candidato con mayor puntaje para proponerle ser delegado. Puede rechazar ser delegado, el sistema tomará el siguiente becado con mejor puntaje y le hará la misma propuesta.|
+|6.2.3 Si todos los becados tienen buen nivel en puntaje, se descontará una tarea poco critica. de la planificación de limpieza y cada uno de ellos tendrá una semana libre.|
