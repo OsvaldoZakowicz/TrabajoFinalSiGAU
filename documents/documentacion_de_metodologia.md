@@ -57,6 +57,8 @@ volver al [principio](#descripción-del-escenario)
 
 volver al [Indice](#indice-de-contenidos)
 
+Acontinuación se incluye un enlce a las respuestas de las entrevistas realizadas al secretario de bienestar estudiantil y al encargado del albergue.
+
 - **Ver [entrevistas](entrevistas.md).**
 
 ## Requerimientos.
