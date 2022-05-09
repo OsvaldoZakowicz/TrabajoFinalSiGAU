@@ -76,6 +76,8 @@ volver al [Indice](#indice-de-contenidos)
 |5. SiGAU permitirá registrar solicitudes de mantenimiento, y planificar jornadas de mantenimiento en las casas de la beca.|
 |6. SiGAU mantendra un sistema de puntajes para cada becado según estos cumplan sus tareas de limpieza y de pago de cuentas a tiempo y en forma, luego usará el puntaje de cada becado para darle un beneficio o asignarle una sancion.|
 |7. SiGAU mantendrá perfiles de usuario, para un administrador general, un auditor, el secretario de bienestar estudiantil, el encargado de albergues, estudiantes y becados, cada perfil tendrá cierto nivel de permisos y acceso a ciertas partes del sistema.|
+|8. SiGAU tiene que ser facil de usar, con ventanas, texto y botones simples, y legible, también debe tener algún manual o guia de uso.|
+|9. SiGAU debe emitir reportes sobre los becados, solicitudes de beca, casas, el mantenimiento y el nivel de limpeza.|
 
 ### Especificación de los requerimientos del sistema.
 
@@ -133,5 +135,14 @@ volver al [Indice](#indice-de-contenidos)
 |7.4 El perfil del encargado de albergues tendrá acceso a los modulos de beca, casa, becados, mantenimiento y planificaciones|
 |7.5 El perfil de estudiante tendrá acceso a la solictud de la beca, y el perfil de becado a su cuenta personal.|
 |7.6 SiGAU no debe permitir el acceso de un perfil a un apartado que no le corresponde.|
+
+| **Requerimientos del sistema, apartado 8** |
+|:-------------------------------------------|
+|8.1 El sistema se desarrollará con un buen tamaño de letra y equilibrado contraste en los colores de las ventanas, texto y botones.|
+|8.2 Se proporcionará un manual de usuario del sistema|
+
+| **Requerimientos del sistema, apartado 9** |
+|:-------------------------------------------|
+|9.1 El sistema proporcionará reportes de cada módulo con la posibilidad de elegir parámetros para el mismo, en formato PDF.|
 
 volver al [principio](#requerimientos)
