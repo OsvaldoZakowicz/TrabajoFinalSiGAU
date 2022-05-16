@@ -148,3 +148,24 @@ volver al [Indice](#indice-de-contenidos)
 |9.1 El sistema proporcionará reportes de cada módulo con la posibilidad de elegir parámetros para el mismo, en formato PDF.|
 
 volver al [principio](#requerimientos)
+
+## Diagrama de Casos de Uso
+
+## Escenarios de Casos de Uso
+
+### Titulo 3
+
+|**Nombre del Caso de Uso:** Nombre|
+|:---|
+|**Actor(es):** Actores|
+|**Descripcion:** descripcion|
+|**Evento desencadenador:** evento|
+|**Flujo tipico de eventos (ruta principal):**|
+|1.*Este caso de uso incia cuando*|
+|2.**|
+|**Flujo alternativo de eventos:**|
+|1.**|
+|2.**|
+|**Precondición:** precondicion|
+|**Postcondición:** postcondicion|
+|**Requerimientos cumplidos:** requerimientos|
