@@ -153,6 +153,44 @@ volver al [principio](#requerimientos)
 
 ## Escenarios de Casos de Uso
 
+### Caso de Uso: Solicitar Beca
+
+|**Nombre del Caso de Uso:** Solicitar Beca|
+|:---|
+|**Actor(es):** Estudiante.|
+|**Descripcion:** Permitir que un Estudiante complete el formulario de solicitud de beca y lo envíe.|
+|**Evento desencadenador:** El estudiante accede al apartado de solicitud de beca.|
+|**Flujo tipico de eventos (ruta principal):**|
+|1.*Este caso de uso incia cuando el estudiante accede al apartado de solicitud de beca.*|
+|2.*El sistema muestra el formulario de solicitud a completar, separado por secciones.*|
+|3.*El estudiante completa los datos obligatorios por cada sección y adjunta la documentación necesaria en los apartados que así lo requieren, y confirma la solicitud de beca.*|
+|4.*El sistema verifica los campos obligatorios de cada apartado y el formato de la documentación adjuntada y a continuación envia el formulario.*|
+|5.*El sistema retorna un mensaje de solicitud de beca exitosa al estudiante, y finaliza el caso de uso.*|
+|**Flujo alternativo de eventos:**|
+|4.*El sistema indica al estudiante que faltan completarse datos obligatorios y/o el formato de la documentación no es válido, retornando al punto 3 del flujo tipico de eventos.*|
+|**Precondición:** El estudiante ya se registró en el sistema, y accedió a su cuenta.|
+|**Postcondición:** El estudiante solicitó con éxito la beca de albergue.|
+|**Requerimientos cumplidos:** **Requerimientos del sistema, apartado 1, punto 1.2** SiGAU Proporcionará un formulario de solicitud para los estudiantes registrados que tomará todos los datos de solicitud personales, académicos, socio-económicos, familiares  y permitirá subir archivos en formato PDF, imagen o documento de texto.|
+
+### Caso de Uso: Renovar Beca
+
+|**Nombre del Caso de Uso:** Renovar Beca|
+|:---|
+|**Actor(es):** Becado|
+|**Descripcion:** Permitir que un becado renueve su beca de albergue realizando una solicitud.|
+|**Evento desencadenador:** El becado accede al apartado de renovación de beca.|
+|**Flujo tipico de eventos (ruta principal):**|
+|1.*Este caso de uso incia cuando el becado accede al apartado de renovación de beca.*|
+|2.*El sistema retorna todos los datos del becado para su revisión y adicionalmente solicita se adjunte una historia académica actualizada en PDF.*|
+|3.*El becado revisa sus datos y adjunta una historia académica, a continuación confirma la solicitud de renovación de la beca.*|
+|4.*El sistema verifica los campos obligatorios de cada apartado y el formato de la documentación adjuntada y a continuación envia el formulario.*|
+|5.*El sistema retorna un mensaje de solicitud de beca exitosa al estudiante, y finaliza el caso de uso.*|
+|**Flujo alternativo de eventos:**|
+|4.*El sistema indica al estudiante que faltan completarse datos obligatorios y/o el formato de la documentación no es válido, retornando al punto 3 del flujo tipico de eventos.*|
+|**Precondición:** El becado accedió a su cuenta correctamente.|
+|**Postcondición:** El becado solicitó con éxito la renovación de la beca de albergue.|
+|**Requerimientos cumplidos:** **Requerimientos del sistema, apartado 1, punto 1.2** SiGAU Proporcionará un formulario de solicitud para los estudiantes registrados que tomará todos los datos de solicitud personales, académicos, socio-económicos, familiares  y permitirá subir archivos en formato PDF, imagen o documento de texto.|
+
 ### Titulo 3
 
 |**Nombre del Caso de Uso:** Nombre|
