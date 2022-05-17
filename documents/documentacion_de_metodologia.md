@@ -191,6 +191,109 @@ volver al [principio](#requerimientos)
 |**Postcondición:** El becado solicitó con éxito la renovación de la beca de albergue.|
 |**Requerimientos cumplidos:** **Requerimientos del sistema, apartado 1, punto 1.2** SiGAU Proporcionará un formulario de solicitud para los estudiantes registrados que tomará todos los datos de solicitud personales, académicos, socio-económicos, familiares  y permitirá subir archivos en formato PDF, imagen o documento de texto.|
 
+### Caso de Uso: Finalizar tarea de limpieza
+
+|**Nombre del Caso de Uso:** Finalizar tarea de limpieza|
+|:---|
+|**Actor(es):** Becado|
+|**Descripcion:** Permitir al becado indicar que ha finalizado la tarea de limpieza que le fue asignada.|
+|**Evento desencadenador:** El becado selecciona la tarea que le fue asignada para indicar su finalización.|
+|**Flujo tipico de eventos (ruta principal):**|
+|1.*Este caso de uso incia cuando el becado accede al apartado de tareas de su cuenta de usuario y selecciona una tarea para finalizarla.*|
+|2.*El sistema retorna un formulario de finalización de tarea con campos a editar y un campo para subir imágenes.*|
+|3.*El becado completa el formulario y adjunta imágenes del área limpia correspondiente a la tarea de limpieza asignada, a continuación envía el formulario.*|
+|4.*El sistema valida los campos obligatorios del formulario, y a continuación lo envía.*|
+|5.*El sistema establece la tarea asignada como realizada y lista para ser calificada, a continuación retorna un mensaje de tarea realizada al becado, y finaliza el caso de uso.*|
+|**Flujo alternativo de eventos:**|
+|4.*El sistema indica al becado que faltan completarse datos obligatorios, retornando al punto 3 del flujo tipico de eventos.*|
+|**Precondición:** El becado accedió a su cuenta correctamente y tiene al menos una tarea de limpieza asignada a finalizar.|
+|**Postcondición:** El becado realizó una tarea de limpieza.|
+|**Requerimientos cumplidos:** **Requerimientos del sistema, apartado 3, punto 3.3** SiGAU permitira que cada becado envié una o mas imagenes (fotos) del área o áreas que limpió para que sea calificada por los demás integrantes de la casa  (calificación del 1 "mal" al 10 "perfecto").|
+
+### Caso de Uso: Calificar tarea de limpieza
+
+|**Nombre del Caso de Uso:** Calificar tarea de limpieza|
+|:---|
+|**Actor(es):** Becado|
+|**Descripcion:** Permitir a un becado calificar una tarea de limpieza realizada con un puntaje del 1 al 10.|
+|**Evento desencadenador:** El becado accede al apartado de tareas de la casa completadas y pendientes de calificación.|
+|**Flujo tipico de eventos (ruta principal):**|
+|1.*Este caso de uso incia cuando el becado accede al apartado de tareas de la casa que están pendientes de calificación.*|
+|2.*El sistema retorna todas las tareas realizadas desde la vigencia de la planificación hasta la fecha actual.*|
+|3.*El becado selecciona una tarea para su visualización*|
+|4.*El sistema retorna la tarea con las imágenes que tiene asociada para su visualización, y un formulario con una escala de calificación*|
+|5.*El becado carga la calificación que dará en la escala y a continuación califica la tarea.*|
+|6.*El sistema verifica que se haya proporcionado una calificación a la tarea y a continuación envía el formulario.*|
+|7.*El sistema almacena la calificación de un becado para una tarea de la casa finalizada, a continuación retorna un mensaje de tarea calificada, y finaliza el caso de uso.*|
+|**Flujo alternativo de eventos:**|
+|2.*El sistema retorna un mensaje indicando que aún no hay tareas finalizadas de la planificación actual para ser calificadas, y finaliza el caso de uso.*|
+|6.*El sistema indica que es ncesario proporcionar una calificación para poder continuar, retornando al punto 4 del flujo tipico de eventos.*|
+|**Precondición:** El sistema cuenta con al menos una tarea del período de planificación actual pendiente de calificación.|
+|**Postcondición:** El becado calificó una tarea realizada con un puntaje de 1 a 10.|
+|**Requerimientos cumplidos:** Cada becado podrá calificar las tareas finalizadas de la planificación actual de su casa con un puntaje del 1 al 10.|
+
+### Caso de Uso: Finalizar beca
+
+|**Nombre del Caso de Uso:** Finalizar Beca.|
+|:---|
+|**Actor(es):** Becado.|
+|**Descripcion:** Permitir a un becado darse de baja de la beca de albergue.|
+|**Evento desencadenador:** El becado accede a su cuenta y entra a la opción de finalización de beca.|
+|**Flujo tipico de eventos (ruta principal):**|
+|1.*Este caso de uso incia cuando el becado accede al apartado de finalización de beca.*|
+|2.*El sistema despliega un formulario de finalización de beca que debe ser completado.*
+|3.*El becado completa el formulario de baja de la beca y a continuación confirma su envío.*|
+|4.*El sistema despliega un aviso informando  sobre la acción a punto de realizarse y pidiendo confirmación solicitando que el becado ingrese su contraseña y confirme los terminos y condiciones de darse de baja de la beca*|
+|5.*El becado proporciona su contraseña y confirma los terminos y condiciones.*|
+|6.*El sistema verifica que se hayan completado los campos obligatorios y a continuación envía el formulario.*|
+|7.*El sistema realiza la baja de la beca, indicando al becado y al encargado de albergue que debe realizarse un posterior desalojo de una casa, iniciando un desalojo. Finalmente, retorna un mensaje al becado de que se realizó su baja de la beca con éxito.*|
+|**Flujo alternativo de eventos:**|
+|5.*El becado cancla la operación de baja de la beca, y finaliza el caso de uso.*|
+|6.*El sistema indica al becado que faltan completarse datos obligatorios, retornando al punto 2 del flujo tipico de eventos.*|
+|**Precondición:** El becado accedió a su cuenta correctamente.|
+|**Postcondición:** El becado realizó la baja de su beca de albergue con éxito.|
+|**Requerimientos cumplidos:** requerimientos|
+
+### Caso de Uso: Retirar bienes
+
+|**Nombre del Caso de Uso:** Retirar bienes|
+|:---|
+|**Actor(es):** Becado|
+|**Descripcion:** Permitir a un becado retirar los bienes que ingreso al albergue, tales como muebles o electrodomésticos.|
+|**Evento desencadenador:** El becado accede a su cuenta y al apartado de sus bienes para retirarlos.|
+|**Flujo tipico de eventos (ruta principal):**|
+|1.*Este caso de uso incia cuando el becado accede a su cuenta y al apartado de bienes para retirarlos.*|
+|2.*El sistema retorna una lista de bienes que tiene el becado en la casa asignada.*|
+|3.*El becado selecciona un bien para retirarlo.*|
+|4.*El sistema sistema muestra el bien a retirar.*|
+|5.*El becado confirma que retirará el bien de la casa*|
+|6.*El sistema marca el bien como retirado de la casa, a continuación informa al becado del retiro exitoso del bien, y notifica al delegado sobre el bien retirado.*|
+|**Flujo alternativo de eventos:**|
+|2.*El sistema indica que el becado no tiene ningun bien en la casa a retirar, y finaliza el caso de uso.*|
+|**Precondición:** El becado tiene al menos un bien en la casa asignada.|
+|**Postcondición:** El becado retiró un bien de la casa asignada, informando de esto al encargado de albergues.|
+|**Requerimientos cumplidos:** requerimientos|
+
+### Caso de Uso: Registrar pedido de mantenimiento
+
+|**Nombre del Caso de Uso:** Registrar pedido de mantenimiento.|
+|:---|
+|**Actor(es):** Becado, Encargado de albergue.|
+|**Descripcion:** Permitir a cada actor registrar un pedido de mantenimiento sobre un área, electrodoméstico o mueble de una casa.|
+|**Evento desencadenador:** El actor accede al apartado de mantenimiento para registrar un pedido de mantenimiento.|
+|**Flujo tipico de eventos (ruta principal):**|
+|1.*Este caso de uso incia cuando el actor accede al apartado de mantenimiento y a registrar un pedido de mantenimiento.*|
+|2.*El sistema despliega un formulario de pedido de mantenimiento a completar para la casa en la que está el actor si es becado. O si es el encargado de albergue, para cualquier casa.*|
+|3.*El actor completa el formulario de solicitud de mantenimiento para un área de una casa en concreto*|
+|4.*El sistema verifica que se hayan completado los datos obligatorios y que no exista una solicitud previa sobre la misma área que esté pendiente de resolverse. A continuación envía el formulario.*|
+|5.*El sistema establece un pedido de mantenimiento para un área de una casa.*|
+|**Flujo alternativo de eventos:**|
+|4.*El sistema indica al actor que faltan completarse datos obligatorios, retornando al punto 2 del flujo tipico de eventos.*|
+|4.*El sistema indica que ya existe un pedido de mantenimiento pendiente para la misma área de la casa, retornando al punto 2 del flujo tipico de eventos.*|
+|**Precondición:** El actor ingreso a su cuenta correctamente, el área de una casa para la cual se establecerá el pedido de mantenimiento no tiene otro pedido previo pendiente.|
+|**Postcondición:** El actor registró con éxito un pedido de mantenimiento de un área de una casa en concreto.|
+|**Requerimientos cumplidos:** requerimientos|
+
 ### Titulo 3
 
 |**Nombre del Caso de Uso:** Nombre|
