@@ -294,6 +294,103 @@ volver al [principio](#requerimientos)
 |**Postcondición:** El actor registró con éxito un pedido de mantenimiento de un área de una casa en concreto.|
 |**Requerimientos cumplidos:** requerimientos|
 
+### Caso de Uso: Registrar pago de servicio
+
+|**Nombre del Caso de Uso:** Registrar pago de servicio.|
+|:---|
+|**Actor(es):** Delegado|
+|**Descripcion:** Permitir al delegado de la casa registrar que ha pagado un servicio doméstico (luz, agua) registrando la boleta de servicio pagada.|
+|**Evento desencadenador:** El delegado ingresa al apartado de servicios de la casa para ingresar un nuevo registro de pago.|
+|**Flujo tipico de eventos (ruta principal):**|
+|1.*Este caso de uso incia cuando el delegado accede al apartado de servicios de la casa para ingresar un nuevo registro de pago.*|
+|2.*El sistema retorna los servicios de cada mes que aún no han sido registrados*|
+|3.*El delegado selecciona el servicio del mes que desea registrar como pagado.*|
+|4.*El sistema retorna un formulario a completar con datos de la boleta de servicio pagada, y un espacio para subir una copia digitalizada de la boleta pagada y el comprobante de pago.*|
+|5.*El delegado completa el formulario y adjunta la boleta y comprobante de pago.*|
+|6.*El sistema verifica que se han completado los datos obligatorios y que los datos no sean de una boleta ya registrada con anterioridad, a continuación envía el formulario.*|
+|7.*El sistema registra un pago de servicio para un mes específico, retorna un mensaje de registro exitoso al delegado, a continuación finaliza el caso de uso.*|
+|**Flujo alternativo de eventos:**|
+|6.*El sistema detecta que se han enviado datos de una boleta ya registrada como pagada con anterioriad en otro mes, o que faltan datos obligatorios por completarse, o el formato de la documentación adjunta no es el indicado, retornando al punto 4 del flujo tipico de eventos.*|
+|**Precondición:** El delegado ingresó a su cuenta correctamente, existe al menos un servicio pendiente de pago.|
+|**Postcondición:** El delegado registró con éxito el pago ya realizado de un servicio doméstico.|
+|**Requerimientos cumplidos:** |
+
+### Caso de Uso: Configurar período de solicitud
+
+|**Nombre del Caso de Uso:** Abrir período de solicitud.|
+|:---|
+|**Actor(es):** Secretario de bienestar estudiantil.|
+|**Descripcion:** Permitir al secretario de bienestar estudiantil configurar el inicio del período de solicitud de becas de albergue y establecer la duración del mismo hasta su cierre.|
+|**Evento desencadenador:** El secretario de bienestar estudiantil accede al apartado de beca para configurar un nuevo periodo de solicitud.|
+|**Flujo tipico de eventos (ruta principal):**|
+|1.*Este caso de uso incia cuando el secretario de bienestar estudiantil accede al apartado de beca para configurar un nuevo periodo de solicitud.*|
+|2.*El sistema retorna un formulario de configuración para el nuevo período de solicitud, con fechas de inicio y fin del período, y el comportamiento del sistema al cerrar el período.*|
+|3.*El secretario de bienestar estudiantil establece las fechas de inicio y fin del período, si desea que el sistema preseleccione solicitudes o no al cerrarse.*|
+|4.*El sistema muestra el total de dias que estará disponible el período de solicitud y adicionalmente mostrará una opcion para guardar la configuración como predeterminada si no hay configuraciones guardadas o si desea sobreescribir una configuración anterior*|
+|5.*El secretario de bienestar estudiantil confirma la apertura del período segun las configuraciones enviando el formulario de configuración.*|
+|6.*El sistema verifica que se han completado todos los campos obligatorios, a continuación configura la apertura y cierre de la solicitud de beca, retornando un mensaje de éxito al secretario de bienestar estudiantil, y finaliza el caso de uso.*|
+|**Flujo alternativo de eventos:**|
+|6.*El sistema indica al secretario de bienestar estudiantil que faltan completarse datos obligatorios, retornando al punto 2 del flujo tipico de eventos.*|
+|**Precondición:** El secretario de bienestar estudiantil ingresó a su cuenta correctamente, no existe un período de solicitud de beca abierto con anterioridad que aún no ha cerrado.|
+|**Postcondición:** El secretario de bienestar estudiantil configuró el período de solicitud para su apertura.|
+|**Requerimientos cumplidos:** requerimientos|
+
+### Caso de Uso: Configurar preseleccion de solicitudes
+
+|**Nombre del Caso de Uso:** Configurar preseleccion de solicitudes.|
+|:---|
+|**Actor(es):** Secretario de bienestar estudiantil.|
+|**Descripcion:** Permitir al secretario de bienestar estudiantil configurar parámetros de preselección de solicitudes que el sistema usará luego del cierre del período de solicitudes para preseleccionar las mismas.|
+|**Evento desencadenador:** El secretario de bienestar estudiantil accede al apartado de configuración de preselección de solicitudes.|
+|**Flujo tipico de eventos (ruta principal):**|
+|1.*Este caso de uso incia cuando el secretario de bienestar estudiantil accede al apartado de configuración de preselección de solicitudes.*|
+|2.*El sistema muestra en un formulario un listado de parámetros de preselección a configurar.*|
+|3.*El secretario de bienestar estudiantil establece los parámetros de preselección, y a continuación envía el formulario.*|
+|4.*El sistema verifica que se han proporcionado todos los datos obligatorios del formulario, a continuación guarda las nuevas configuraciones.*|
+|5.*El sistema retorna un mensaje de éxito en la configuración y finaliza el caso de uso.*|
+|**Flujo alternativo de eventos:**|
+|4.*El sistema indica al secretario de bienestar estudiantil que faltan completarse datos obligatorios, retornando al punto 2 del flujo tipico de eventos*|
+|**Precondición:** El scretario de bienestar estudiantil ingresó a su cuenta correctamente.|
+|**Postcondición:** El secretario de bienestar estudiantil configuró los parámetros de preselección de solicitudes del sistema.|
+|**Requerimientos cumplidos:** requerimientos|
+
+### Caso de Uso: Verificar documentacion
+
+|**Nombre del Caso de Uso:** Verificar documentacion.|
+|:---|
+|**Actor(es):** Secretario de bienestar estudiantil.|
+|**Descripcion:** Permitir al secretario de bienestar estudiantil verificar la documentación de una solicitud de beca.|
+|**Evento desencadenador:** El secretario de bienestar estudiantil selcciona una solicitud de beca para su análisis.|
+|**Flujo tipico de eventos (ruta principal):**|
+|1.*Este caso de uso incia cuando el secretario de bienestar estudiantil selecciona una solicitud para su análisis.*|
+|2.*El sistema retorna los datos de la solicitud y la documentación asociada para su visualización*|
+|3.*Por cada documento visualizado, el secretario de bienestar estudiantil puede marcarlo como aceptado o no y adicionalmente, en caso de que no se acepte el documento, comentando el motivo. Al finalizar, cierra la verificación.*|
+|4.*El sistema analiza la solicitud, si toda la documentación fue aceptada, la misma se marca como "documentacion verificada", y finaliza el caso de uso.*|
+|**Flujo alternativo de eventos:**|
+|4.*El sistema analiza la solicitud, si existe documentación rechazada solicitar un reenvío de documentación, indicando el motivo de cada documento rechazado y dando una fecha límite de reenvío, y finaliza el caso de uso.*|
+|**Precondición:** El secretario de bienestar estudiantil ingresó correctamente a su cuenta.|
+|**Postcondición:** El secretario de bienestar estudiantil verificó con éxito la documentación asociada a una solicitud.|
+|**Requerimientos cumplidos:** requerimientos|
+
+### Caso de Uso: Finalizar análisis de solicitudes
+
+|**Nombre del Caso de Uso:** Finalizar análisis de solicitudes|
+|:---|
+|**Actor(es):** Secretario de bienestar estudiantil.|
+|**Descripcion:** Permitir al secretario de bienestar estudiantil finalizar el análisis de solicitudes realizando una preselccion de las mismas.|
+|**Evento desencadenador:** El secretario de bienestar estdiantil accede al apartado de beca y finaliza el análisis de solicitudes|
+|**Flujo tipico de eventos (ruta principal):**|
+|1.*Este caso de uso inicia cuando el secretario de bienestar estdiantil accede al apartado de beca y finaliza el análisis de solicitudes*|
+|2.*El sistema verifica que todas las solicitudes tengan su documentación verificada y todos los pedidos de reenvío hayan vencido, a continuación realiza una preselección de solicitudes y retorna los preseleccionados*|
+|3.*El secretario de bienestar estudiantil confirma la preselección de solicitudes.*|
+|4.*El sistema hace efectiva la preselección de solicitudes, ordenando las solicitudes preseleccionadas en orden de prioridad según sus parámetros, a continuación hace visibles los preseleccionados para el encargado de albergues, y finaliza el caso de uso.*|
+|**Flujo alternativo de eventos:**|
+|2.*El sistema indica al secretario de bienestar estudiantil que existen solicitudes cuya documentación no ha sido verificada, y finaliza el caso de uso.*|
+|2.*El sistema indica al secretario de bienestar estudiantil que existen solicitudes cuyo período para reenviar documentación no ha finalizado, y finaliza el caso de uso.*|
+|**Precondición:** El secretario de bienestar estudiantil ingresó correctamente a su cuenta, y todas las solicitudes tienen la documentación verificada y/o reenviada.|
+|**Postcondición:** El secretario de binestar estudiantil fnalizó el análisis de solicitudes con una preselección de las mismas.|
+|**Requerimientos cumplidos:** requerimientos|
+
 ### Titulo 3
 
 |**Nombre del Caso de Uso:** Nombre|
