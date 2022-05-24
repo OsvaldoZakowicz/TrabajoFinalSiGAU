@@ -25,13 +25,21 @@
 
 ## Indice de contenidos
 
-1. [Descripción del Escenario](#descripción-del-escenario)
+1. Modelado del Negocio.
+
+    1. [Descripción del Escenario](#descripción-del-escenario)
+
+2. Requerimientos.
 
     1. [Entrevistas y Cuestionarios](#entrevistas-y-cuestionarios)
 
     2. [Requerimientos](#requerimientos)
 
-2.
+3. Análisis del Dominio.
+
+    1. [Diagrama de Casos de Uso](#diagrama-de-casos-de-uso)
+
+    2. [Escenarios de Casos de Uso](#escenarios-de-casos-de-uso)
 
 ---
 
@@ -152,6 +160,8 @@ volver al [principio](#requerimientos)
 ## Diagrama de Casos de Uso
 
 ## Escenarios de Casos de Uso
+
+volver al [Indice](#indice-de-contenidos)
 
 ### Caso de Uso: Solicitar Beca
 
@@ -540,3 +550,5 @@ volver al [principio](#requerimientos)
 |**Precondición:** precondicion|
 |**Postcondición:** postcondicion|
 |**Requerimientos cumplidos:** requerimientos|
+
+volver al [principio](#escenarios-de-casos-de-uso)
