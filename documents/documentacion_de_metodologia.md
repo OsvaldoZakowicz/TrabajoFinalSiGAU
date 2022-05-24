@@ -391,6 +391,139 @@ volver al [principio](#requerimientos)
 |**Postcondición:** El secretario de binestar estudiantil fnalizó el análisis de solicitudes con una preselección de las mismas.|
 |**Requerimientos cumplidos:** requerimientos|
 
+### Caso de Uso: Otorgar beca
+
+|**Nombre del Caso de Uso:** Otorgar beca.|
+|:---|
+|**Actor(es):** Encargado de albergue.|
+|**Descripcion:** Permitir al encargado de albergue visualizar una solicitud de beca preseleccionada para otorgarle la beca.|
+|**Evento desencadenador:** El encargado de albergue accede a la sección de beca, al apartado de preseleccionados, y selecciona una solicitud para visualizarla.|
+|**Flujo tipico de eventos (ruta principal):**|
+|1.*Este caso de uso incia cuando el encargado de albergue accede a la sección de beca, al apartado de preseleccionados, selecciona una solicitud para visualizarla.*|
+|2.*El sistema retorna los datos de la solicitud, si es una solicitud nueva o una renovación de beca y la documentación adjunta.*|
+|3. *El encargado de albergue comprueba el estado académico de la solicitud, si se trata de una renovación, para saber si cumple el requisito de renovación comprueba también la historia académica adjunta, de tratarse de una solicitud nueva, no existe requisito académico previo, si alguno de los casos es correcto, a continuación otorga la beca al estudiante.*|
+|4. *El sistema despliega un formulario de beca, completa los datos del estudiante con los ya proporcionados en la solicitud y solicita se asigne una casa y una habitación al becado.*|
+|5. *El encargado de albergue asigna una casa y habitación al becado.*|
+|6. *El sistema verifica que se han proporcionado todos los datos obligatorios del formulario, a continuación, se otorga la beca a un estudiante asignándolo a una casa y habitación*|
+|7. *El sistema retorna un mensaje indicando el éxito al becar al estudiante y el uso de un lugar disponible en los albergues universitarios, a continuación finaliza el caso de uso*|.
+|**Flujo alternativo de eventos:**|
+|3. *El encargado de albergue observa que la solicitud es de renovación y que no cumple el requisito mínimo académico, finaliza este caso de uso y continúa el caso de uso "Establecer plazo académico"*|
+|4. *El sistema indica que ya no quedan lugares disponibles en la beca de albergue, y finaliza este caso de uso.*|
+|6. *El sistema indica que faltan completarse datos obligatorios del formulario, retornando al punto 4 del flujo tipico de eventos.*|
+|**Precondición:** El encargado de albergue accedió correctamente a su cuenta, ya está disponible el listado de preseleccionados, y existen aún lugares disponibles en la beca de albergue.|
+|**Postcondición:** El encargado de albergué asignó una beca a un estudiante, incluyéndolo en una casa y una habitación, descontando de la beca un lugar.|
+|**Requerimientos cumplidos:** requerimientos|
+
+### Caso de Uso: Establecer plazo académico
+
+|**Nombre del Caso de Uso:** Establecer plazo académico.|
+|:---|
+|**Actor(es):** Encargado de albergue.|
+|**Descripcion:** Permitir al encargado de albergue establecer un plazo académico en el que un becado que esté renovando su beca debe previamente cumplir los requisitos académicos y presentar una história académica nueva.|
+|**Evento desencadenador:** El encargado de albergue está visualizando una solicitud de renovación de beca y accede a establecer un plazo académico para la misma.|
+|**Flujo tipico de eventos (ruta principal):**|
+|1.*Este caso de uso incia cuando el encargado de albergue está visualizando una solicitud de renovación de beca y accede a establecer un plazo académico para la misma.*|
+|2.*El sistema despliega un formulario para establecer un plazo académico solicitando la fecha del fin de plazo y la cantidad de materias que debe aprobar.*|
+|3. *El encargado de albergues completa el formulario y a continuación confirma el plazo académico.*|
+|4. *El sistema verifica que se han proporcionado todos los datos obligatorios del formulario. A continuación establece el plazo académico informando al becado que se le renueva la beca hasta que finalice el plazo, y para continuar becado debe aprobar las materias faltantes y presentar una nueva historia académica*|
+|5. *El sistema retorna un mensaje de éxito al establecer un plazo académco, y a continuación finaliza el caso de uso.*|
+|**Flujo alternativo de eventos:**|
+|4.*El sistema indica que faltan completarse datos obligatorios del formulario, retornando al punto 2 del flujo tipico de eventos.*|
+|**Precondición:** El encargado de albergues accedió correctamente a su cuenta.|
+|**Postcondición:** El encargado de albergues estableció un plazo académico para un becado, renovando provisoriamente la beca hasta el fin del plazo.|
+|**Requerimientos cumplidos:** requerimientos|
+
+### Caso de Uso: Cambiar de casa
+
+|**Nombre del Caso de Uso:** Cambiar de casa.|
+|:---|
+|**Actor(es):** Encargado de Albergue.|
+|**Descripcion:** Permitir al encargado de albergue asignar otra casa y habitación a un becado, si hay lugares disponibles, o intercambiar dos becados de casa y habitación, o solo de habitación en la misma casa.|
+|**Evento desencadenador:** El encargado de albergue accede al apartado de beca y al listado de becados, y selecciona uno para visualizarlo y cambiar de casa o habitación.|
+|**Flujo tipico de eventos (ruta principal):**|
+|1.*Este caso de uso incia cuando el encargado de albergue accede al apartado de beca y al listado de becados, y selecciona uno para visualizarlo y cambiar de casa o habitación*|
+|2.*El sistema retorna un formulario de cambio de casa para el becado seleccionado, y a continuación solicita casa y lugar a asignar, o un becado con el que intercambiar lugar.*|
+|3. *El encargado de albergue completa el formulario estableciendo el cambio de casa para el o los becados involucrados, o un cambio de habitacion en la misma casa*|
+|4. *El sistema verifica que se han proporcionado todos los datos obligatorios del formulario. A continuación establece el intercambio de lugares, informando a cada becado e indicando que se confirme por parte de cada uno la conformidad del cambio. A continuación finaliza el caso de uso.*|
+|**Flujo alternativo de eventos:**|
+|4.*El sistema indica que faltan completarse datos obligatorios del formulario, retornando al punto 2 del flujo tipico de eventos.*|
+|**Precondición:** El encargado de albergue accedió a su cuenta correctamente.|
+|**Postcondición:** El encargado de albergue estableció un cambio de lugar para uno o dos becados.|
+|**Requerimientos cumplidos:** requerimientos|
+
+### Caso de Uso: Revocar beca
+
+|**Nombre del Caso de Uso:** Revocar beca.|
+|:---|
+|**Actor(es):** Encargado de albergue.|
+|**Descripcion:** Permitir al encargado de albergue revocar la beca a un becado y solicitar su desalojo en un plazo de tiempo.|
+|**Evento desencadenador:** El encargado de albergue accede a los datos de un becado para revocar su beca.|
+|**Flujo tipico de eventos (ruta principal):**|
+|1.*Este caso de uso incia cuando el encargado de albergue accede a los datos de un becado para revocar su beca.*|
+|2.*El sistema retorna un formulario de revocación de beca, solicitando seleccione el motivo por el cual se revoca la beca, detallando con una descripción y establezca un plazo de desalojo.*|
+|3. *El encargado de albergue completa el formulario.*|
+|4. *El sistema verifica que se han proporcionado todos los datos obligatorios del formulario. A continuación revoca el beneficio de beca e informa al becado el motivo y fecha limite de desalojo. A continuación muestra un mensaje de éxito y finaliza el caso de uso.*|
+|**Flujo alternativo de eventos:**|
+|4.*El sistema indica que faltan completarse datos obligatorios del formulario, retornando al punto 2 del flujo tipico de eventos.*|
+|**Precondición:** El encargado de albergue accedió a su cuenta correctamente.|
+|**Postcondición:** El encargado de albergues revocó la beca de un estudiante.|
+|**Requerimientos cumplidos:** requerimientos|
+
+### Caso de Uso: Planificar jornada de mantenimiento
+
+|**Nombre del Caso de Uso:** Planificar jornada de mantenimiento.|
+|:---|
+|**Actor(es):** Encargado de albergue.|
+|**Descripcion:** Permitir al encargado de albergue planificar una jornada de mantenimiento e incluir en ella pedidos de mantenimiento a atender.|
+|**Evento desencadenador:** El encargado de albergue accede al apartado de mantenimiento para planificar una nueva jornada de mantenimiento.|
+|**Flujo tipico de eventos (ruta principal):**|
+|1.*Este caso de uso incia cuando el encargado de albergue accede al apartado de mantenimiento para planificar una nueva jornada de mantenimiento.*|
+|2.*El sistema retorna un formulario de planificación de jornada, y una lista de pedidos de mantenimiento pendiente.*|
+|3. *El encargado de albergue establece la fecha de la planificación, e incluye en ella las tareas de mantenimiento que se realizarán.*|
+|4. *El sistema verifica que se han proporcionado todos los datos obligatorios del formulario. A continuación planifica una nueva jornada de mantenimiento, notifica a todos los becados de la misma, y finaliza el caso de Uso.*|
+|**Flujo alternativo de eventos:**|
+|2.*El sistema retorna un formulario de planificación e indica que no hay pedidos de mantenimiento pendientes, indicando que se pueden "registrar pedidos de mantenimiento" nuevas para la planificación, o en caso contrario, finalizar el caso de uso.*|
+|4. *El sistema indica que faltan completarse datos obligatorios del formulario, retornando al punto 2 del flujo tipico de eventos.*|
+|**Precondición:** El encargado de albergue accedió correctamente a su cuenta.|
+|**Postcondición:** El encargado de albergues planificó una jornada de mantenimiento e incluyó en ella pedidos de mantenimiento a tratar, notificando a los becados.|
+|**Requerimientos cumplidos:** requerimientos|
+
+### Caso de Uso: Registrar casa
+
+|**Nombre del Caso de Uso:** Registrar casa.|
+|:---|
+|**Actor(es):** Encargado de albergue.|
+|**Descripcion:** Permitir al encargado de albergue registrar una casa de albergue universitario.|
+|**Evento desencadenador:** El encargado de albergue accede al apartado de casas para registrar una nueva casa de albergue.|
+|**Flujo tipico de eventos (ruta principal):**|
+|1.*Este caso de uso incia cuando el ncargado de albergue accede al apartado de casas para registrar una nueva casa de albergue*|
+|2.*El sistema retorna un formulario de registro de casas.*|
+|3. *El encargado de albergue completa el formulario con los datos de una casa.*|
+|4. *El sistema verifica que se han proporcionado todos los datos obligatorios del formulario. A continuación rgistra una nueva casa de albergue, y en base al numero de habitaciones y lugares por habitación, amplia el numero de becas otorgables.*|
+|**Flujo alternativo de eventos:**|
+|4. *El sistema indica que faltan completarse datos obligatorios del formulario, retornando al punto 2 del flujo tipico de eventos.*|
+|**Precondición:** El encargado de albergues accedió correctamente a su cuenta.|
+|**Postcondición:** El encargado de albergues registró con éxito una nueva casa para la beca de albergues.|
+|**Requerimientos cumplidos:** requerimientos|
+
+### Caso de Uso: Registrar bienes
+
+|**Nombre del Caso de Uso:** Registrar bienes.|
+|:---|
+|**Actor(es):** Encargado de albergues.|
+|**Descripcion:** Permitir al encargado de albergues registrar un bien ingresado a una de las casas erteneciente a un becado o perteneciente a una de las casas, siendo un bien un electrodoméstico, mueble, o alguna otra utilidad.|
+|**Evento desencadenador:** El encargado de albergue selecciona una casa para la cual registrará un bien.|
+|**Flujo tipico de eventos (ruta principal):**|
+|1.*Este caso de uso incia cuando el encargado de albergue selecciona una casa para la cual registrará un bien.*|
+|2.*El sistema retorna un formulario de registro para un bien.*|
+|3. *El encargado de albergues completa el formulario con los datos de un bien, indicando si se trata de el bien de un becado, seleccionando al mismo, o propio de una casa.*|
+|4. *El sistema verifica que se han proporcionado todos los datos obligatorios del formulario. A continuación registra el nuevo bien, si se trata del bien de un becado este es notificado, se notifica del éxito de la operación y finaliza el caso de uso.*|
+|**Flujo alternativo de eventos:**|
+|4. *El sistema indica que faltan completarse datos obligatorios del formulario, retornando al punto 2 del flujo tipico de eventos.*|
+|**Precondición:** El encargado de albergues accedió correctamente a su cuenta.|
+|**Postcondición:** El encargado de albergues registró un nuevo bien para una casa.|
+|**Requerimientos cumplidos:** requerimientos|
+
 ### Titulo 3
 
 |**Nombre del Caso de Uso:** Nombre|
