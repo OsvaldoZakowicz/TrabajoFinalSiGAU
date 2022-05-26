@@ -111,8 +111,8 @@ volver al [Indice](#indice-de-contenidos)
 |:-------------------------------------------|
 |3.1 SiGAU mantendrá un listado de áreas que deben ser mantenidas limpias para cada casa, su nivel de prioridad, y el plazo de planificación en que debe cumplirse cada tarea.|
 |3.2 SiGAU planificará en un calendario para cada becado de cada casa una o mas tareas de limpieza que se deben completar en un tiempo (5, 7, 10 dias).|
-|3.3 SiGAU permitira que cada becado envié una o mas imagenes (fotos) del área o áreas que limpió para que sea calificada por los demás integrantes de la casa  (calificación del 1 "mal" al 10 "perfecto").|
-|3.4 SiGAU re-planificará las tareas asignadas en un período de tiempo cuando se incluya un nuevo becado en una casa o cuando se quite un becado de una casa.|
+|3.3 SiGAU permitira que cada becado registre la finalización de una tarea asignada y envié una o mas imagenes (fotos) del área o áreas que limpió para que sea calificada por los demás integrantes de la casa  (calificación del 1 "mal" al 10 "perfecto").|
+|3.4 SiGAU replanificará las tareas asignadas en un período de tiempo cuando se incluya un nuevo becado en una casa o cuando se quite un becado de una casa.|
 |3.5 En caso de que no se estén cumpliendo las tareas en tiempo y forma, SiGAU propondrá resolver tareas por equipos o en otros horarios diferentes.|
 
 | **Requerimientos del sistema, apartado 4** |
@@ -203,29 +203,29 @@ volver al [Indice](#indice-de-contenidos)
 
 ### Caso de Uso: Finalizar tarea de limpieza
 
-|**Nombre del Caso de Uso:** Finalizar tarea de limpieza|
+|**Nombre del Caso de Uso:** Finalizar tarea de limpieza.|
 |:---|
-|**Actor(es):** Becado|
-|**Descripcion:** Permitir al becado indicar que ha finalizado la tarea de limpieza que le fue asignada.|
+|**Actor(es):** Becado.|
+|**Descripcion:** Permitir al becado indicar que ha finalizado la tarea de limpieza que le fue asignada registrando la finalización de la misma.|
 |**Evento desencadenador:** El becado selecciona la tarea que le fue asignada para indicar su finalización.|
 |**Flujo tipico de eventos (ruta principal):**|
-|1.*Este caso de uso incia cuando el becado accede al apartado de tareas de su cuenta de usuario y selecciona una tarea para finalizarla.*|
-|2.*El sistema retorna un formulario de finalización de tarea con campos a editar y un campo para subir imágenes.*|
-|3.*El becado completa el formulario y adjunta imágenes del área limpia correspondiente a la tarea de limpieza asignada, a continuación envía el formulario.*|
-|4.*El sistema valida los campos obligatorios del formulario, y a continuación lo envía.*|
+|1.*Este caso de uso incia cuando el becado accede al apartado de tareas de su casa y selecciona una tarea que le fue asignada para finalizarla.*|
+|2.*El sistema retorna un formulario de finalización de tarea con campos a completar y un campo para subir imágenes.*|
+|3.*El becado completa el formulario y adjunta imágenes del área limpia correspondiente a la tarea de limpieza asignada, y lo envía.*|
+|4.*El sistema valida los campos obligatorios del formulario.*|
 |5.*El sistema establece la tarea asignada como realizada y lista para ser calificada, a continuación retorna un mensaje de tarea realizada al becado, y finaliza el caso de uso.*|
 |**Flujo alternativo de eventos:**|
 |4.*El sistema indica al becado que faltan completarse datos obligatorios, retornando al punto 3 del flujo tipico de eventos.*|
-|**Precondición:** El becado accedió a su cuenta correctamente y tiene al menos una tarea de limpieza asignada a finalizar.|
-|**Postcondición:** El becado realizó una tarea de limpieza.|
-|**Requerimientos cumplidos:** **Requerimientos del sistema, apartado 3, punto 3.3** SiGAU permitira que cada becado envié una o mas imagenes (fotos) del área o áreas que limpió para que sea calificada por los demás integrantes de la casa  (calificación del 1 "mal" al 10 "perfecto").|
+|**Precondición:** El becado accedió a su cuenta correctamente y tiene al menos una tarea de limpieza asignada que debe finalizar.|
+|**Postcondición:** El becado registró la finalización de una tarea de limpieza con éxito.|
+|**Requerimientos cumplidos:** *Requerimientos del sistema, apartado 3, item 3.3 SiGAU permitira que cada becado registre la finalización de una tarea asignada y envié una o mas imagenes (fotos) del área o áreas que limpió para que sea calificada por los demás integrantes de la casa*.|
 
 ### Caso de Uso: Calificar tarea de limpieza
 
-|**Nombre del Caso de Uso:** Calificar tarea de limpieza|
+|**Nombre del Caso de Uso:** Calificar tarea de limpieza.|
 |:---|
-|**Actor(es):** Becado|
-|**Descripcion:** Permitir a un becado calificar una tarea de limpieza realizada con un puntaje del 1 al 10.|
+|**Actor(es):** Becado.|
+|**Descripcion:** Permitir a un becado, por cada tarea asignada a sus cmpañeros de casa, calificar una tarea de limpieza realizada con un puntaje del 1 al 10.|
 |**Evento desencadenador:** El becado accede al apartado de tareas de la casa completadas y pendientes de calificación.|
 |**Flujo tipico de eventos (ruta principal):**|
 |1.*Este caso de uso incia cuando el becado accede al apartado de tareas de la casa que están pendientes de calificación.*|
@@ -234,13 +234,13 @@ volver al [Indice](#indice-de-contenidos)
 |4.*El sistema retorna la tarea con las imágenes que tiene asociada para su visualización, y un formulario con una escala de calificación*|
 |5.*El becado carga la calificación que dará en la escala y a continuación califica la tarea.*|
 |6.*El sistema verifica que se haya proporcionado una calificación a la tarea y a continuación envía el formulario.*|
-|7.*El sistema almacena la calificación de un becado para una tarea de la casa finalizada, a continuación retorna un mensaje de tarea calificada, y finaliza el caso de uso.*|
+|7.*El sistema guarda la calificación de un becado para una tarea de la casa finalizada, a continuación retorna un mensaje de tarea calificada, y finaliza el caso de uso.*|
 |**Flujo alternativo de eventos:**|
 |2.*El sistema retorna un mensaje indicando que aún no hay tareas finalizadas de la planificación actual para ser calificadas, y finaliza el caso de uso.*|
 |6.*El sistema indica que es ncesario proporcionar una calificación para poder continuar, retornando al punto 4 del flujo tipico de eventos.*|
 |**Precondición:** El sistema cuenta con al menos una tarea del período de planificación actual pendiente de calificación.|
 |**Postcondición:** El becado calificó una tarea realizada con un puntaje de 1 a 10.|
-|**Requerimientos cumplidos:** Cada becado podrá calificar las tareas finalizadas de la planificación actual de su casa con un puntaje del 1 al 10.|
+|**Requerimientos cumplidos:** *Requerimientos del sistema, apartado 3, item 3.3 SiGAU permitira que cada becado registre la finalización de una tarea asignada y envié una o mas imagenes (fotos) del área o áreas que limpió para que sea calificada por los demás integrantes de la casa  (calificación del 1 "mal" al 10 "perfecto").* En este caso, se permitirá a cada becado calificar las tareas asignadas a sus compañeros de casa.|
 
 ### Caso de Uso: Finalizar beca
 
