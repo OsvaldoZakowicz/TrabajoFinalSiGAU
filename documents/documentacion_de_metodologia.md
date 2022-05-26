@@ -107,6 +107,9 @@ volver al [Indice](#indice-de-contenidos)
 |2.3 SiGAU mantendrá un registro con los lugares libres de cada casa por habitación.|
 |2.4 A medida que se ocupen o liberen espacios en los albegrues, SiGAU mantendrá actualizada la cantidad de lugares libres.|
 |2.5 Si ya no existen lugares libres en una casa, SiGAU no debe permitir que se asigue una beca de albergue a un estudiante para dicha casa.|
+|2.6 SiGAU permitirá registrar por cada casa los bienes presentes en ella, ya sean bienes propios de los albergues o bienes traidos por los becados.|
+|2.7 SiGAU permitirá a un becado retirar sus bienes de la casa en donde esté.|
+|2.8 SiGAU permitirá al encargado de albergues retirar los bienes de una casa que son propiedad de los albrgues.|
 
 | **Requerimientos del sistema, apartado 3** |
 |:-------------------------------------------|
@@ -257,21 +260,21 @@ volver al [Indice](#indice-de-contenidos)
 |4.*El sistema despliega un aviso informando sobre la acción a punto de realizarse y pidiendo confirmación solicitando que el becado ingrese su contraseña y confirme los terminos y condiciones de darse de baja de la beca*|
 |5.*El becado proporciona su contraseña y confirma los terminos y condiciones.*|
 |6.*El sistema verifica que se hayan completado los campos obligatorios y a continuación envía el formulario.*|
-|7.*El sistema realiza la baja de la beca, indicando al becado y al encargado de albergue que debe realizarse un posterior desalojo de una casa, iniciando un desalojo, replanifica la limpieza de cada casa para los becados aún presentes. Finalmente, retorna un mensaje al becado de que se realizó su baja de la beca con éxito.*|
+|7.*El sistema realiza la baja de la beca, replanifica la limpieza de la casa para los becados aún presentes, actualiza la cantidad de lugares libres en el albergue. Finalmente, retorna un mensaje al becado de que se realizó su baja de la beca con éxito, de que debe retirar sus bienes, en caso de que los tenga, y notifica al encargado de albergue sobre la baja.*|
 |**Flujo alternativo de eventos:**|
 |5.*El becado cancela la operación de baja de la beca, y finaliza el caso de uso.*|
 |6.*El sistema indica al becado que faltan completarse datos obligatorios, retornando al punto 2 del flujo tipico de eventos.*|
 |**Precondición:** El becado accedió a su cuenta correctamente.|
 |**Postcondición:** El becado realizó la baja de su beca de albergue con éxito.|
-|**Requerimientos cumplidos:** Requerimientos del sistema, apartado 1, item 1.6 SiGAU debe permitir a un becado finalizar su beca, dandose de baja por si mismo cuando no quiera usar mas el albergue.|
+|**Requerimientos cumplidos:** *Requerimientos del sistema, apartado 1, item 1.6 SiGAU debe permitir a un becado finalizar su beca, dandose de baja por si mismo cuando no quiera usar mas el albergue. Apartado 2, item 2.4 A medida que se ocupen o liberen espacios en los albegrues, SiGAU mantendrá actualizada la cantidad de lugares libres.*|
 
 ### Caso de Uso: Retirar bienes
 
-|**Nombre del Caso de Uso:** Retirar bienes|
+|**Nombre del Caso de Uso:** Retirar bienes.|
 |:---|
-|**Actor(es):** Becado|
+|**Actor(es):** Becado.|
 |**Descripcion:** Permitir a un becado retirar los bienes que ingreso al albergue, tales como muebles o electrodomésticos.|
-|**Evento desencadenador:** El becado accede a su cuenta y al apartado de sus bienes para retirarlos.|
+|**Evento desencadenador:** El becado accede a su cuenta y al apartado de sus bienes para retirarlos de la casa en donde está.|
 |**Flujo tipico de eventos (ruta principal):**|
 |1.*Este caso de uso incia cuando el becado accede a su cuenta y al apartado de bienes para retirarlos.*|
 |2.*El sistema retorna una lista de bienes que tiene el becado en la casa asignada.*|
@@ -283,7 +286,7 @@ volver al [Indice](#indice-de-contenidos)
 |2.*El sistema indica que el becado no tiene ningun bien en la casa a retirar, y finaliza el caso de uso.*|
 |**Precondición:** El becado tiene al menos un bien en la casa asignada.|
 |**Postcondición:** El becado retiró un bien de la casa asignada, informando de esto al encargado de albergues.|
-|**Requerimientos cumplidos:** requerimientos|
+|**Requerimientos cumplidos:** *Requerimientos del sistema, apartado 2, item 2.7 SiGAU permitirá a un becado retirar sus bienes de la casa en donde esté.*|
 
 ### Caso de Uso: Registrar pedido de mantenimiento
 
