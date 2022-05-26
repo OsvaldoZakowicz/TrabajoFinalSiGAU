@@ -127,7 +127,7 @@ volver al [Indice](#indice-de-contenidos)
 
 | **Requerimientos del sistema, apartado 5** |
 |:-------------------------------------------|
-|5.1 SiGAU permitirá que cada becado pueda realizar una solicitud de mantenimiento sobre algún área en presunto desperfecto en la casa donde habita.|
+|5.1 SiGAU permitirá que cada becado o al encargado de albergues pueda realizar una solicitud de mantenimiento sobre algún área en desperfecto en la casa donde habita.|
 |5.2 Por cada solicitud de mantenimiento, SiGAU establecerá un trabajo pendiente a resolver, marcándo esta solicitud como abierta.|
 |5.3 SiGAU permitirá que cada solicitud de mantenimiento pueda luego establecerse como cerrada por el solicitante o el encargado de albergues cuando se encuentre cumplida.|
 |5.4 SiGAU permitirá que el encargado de albergue planifique jornadas de mantenimiento e incluya en ellas solicitudes de mantenimiento a resolver, luego informará de esto a todos los becados.|
@@ -300,13 +300,13 @@ volver al [Indice](#indice-de-contenidos)
 |2.*El sistema despliega un formulario de pedido de mantenimiento a completar para la casa en la que está el actor si es becado. O si es el encargado de albergue, para cualquier casa.*|
 |3.*El actor completa el formulario de solicitud de mantenimiento para un área de una casa en concreto*|
 |4.*El sistema verifica que se hayan completado los datos obligatorios y que no exista una solicitud previa sobre la misma área que esté pendiente de resolverse. A continuación envía el formulario.*|
-|5.*El sistema establece un pedido de mantenimiento para un área de una casa.*|
+|5.*El sistema establece un pedido de mantenimiento para un área de una casa, estableciendo un trabajo pendiente a resolver.*|
 |**Flujo alternativo de eventos:**|
 |4.*El sistema indica al actor que faltan completarse datos obligatorios, retornando al punto 2 del flujo tipico de eventos.*|
 |4.*El sistema indica que ya existe un pedido de mantenimiento pendiente para la misma área de la casa, retornando al punto 2 del flujo tipico de eventos.*|
 |**Precondición:** El actor ingreso a su cuenta correctamente, el área de una casa para la cual se establecerá el pedido de mantenimiento no tiene otro pedido previo pendiente.|
 |**Postcondición:** El actor registró con éxito un pedido de mantenimiento de un área de una casa en concreto.|
-|**Requerimientos cumplidos:** requerimientos|
+|**Requerimientos cumplidos:** *Requerimientos del sistema, apartado 5, item 5.1 SiGAU permitirá que cada becado o al encargado de albergues pueda realizar una solicitud de mantenimiento sobre algún área en desperfecto en la casa donde habita, item 5.2 Por cada solicitud de mantenimiento, SiGAU establecerá un trabajo pendiente a resolver, marcándo esta solicitud como abierta.*|
 
 ### Caso de Uso: Registrar pago de servicio
 
