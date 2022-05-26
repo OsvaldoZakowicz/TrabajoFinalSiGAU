@@ -98,6 +98,7 @@ volver al [Indice](#indice-de-contenidos)
 |1.3 SiGAU Encriptará los datos personales y documentacion de cada estudiante en la base de datos.|
 |1.4 SiGAU Realizará una preselección de solicitudes de beca según parámetros de selección preestablecidos cuando el período de solicitud finalice.|
 |1.5 SiGAU no debe permitir que se realice una solicitud hasta que se adjunten los documentos requeridos en cada apartado del formulario de solicitud en el formato adecuado.|
+|1.6 SiGAU debe permitir a un becado finalizar su beca, dandose de baja por si mismo cuando no quiera usar mas el albergue.|
 
 | **Requerimientos del sistema, apartado 2.** |
 |:--------------------------------------------|
@@ -253,16 +254,16 @@ volver al [Indice](#indice-de-contenidos)
 |1.*Este caso de uso incia cuando el becado accede al apartado de finalización de beca.*|
 |2.*El sistema despliega un formulario de finalización de beca que debe ser completado.*
 |3.*El becado completa el formulario de baja de la beca y a continuación confirma su envío.*|
-|4.*El sistema despliega un aviso informando  sobre la acción a punto de realizarse y pidiendo confirmación solicitando que el becado ingrese su contraseña y confirme los terminos y condiciones de darse de baja de la beca*|
+|4.*El sistema despliega un aviso informando sobre la acción a punto de realizarse y pidiendo confirmación solicitando que el becado ingrese su contraseña y confirme los terminos y condiciones de darse de baja de la beca*|
 |5.*El becado proporciona su contraseña y confirma los terminos y condiciones.*|
 |6.*El sistema verifica que se hayan completado los campos obligatorios y a continuación envía el formulario.*|
-|7.*El sistema realiza la baja de la beca, indicando al becado y al encargado de albergue que debe realizarse un posterior desalojo de una casa, iniciando un desalojo. Finalmente, retorna un mensaje al becado de que se realizó su baja de la beca con éxito.*|
+|7.*El sistema realiza la baja de la beca, indicando al becado y al encargado de albergue que debe realizarse un posterior desalojo de una casa, iniciando un desalojo, replanifica la limpieza de cada casa para los becados aún presentes. Finalmente, retorna un mensaje al becado de que se realizó su baja de la beca con éxito.*|
 |**Flujo alternativo de eventos:**|
-|5.*El becado cancla la operación de baja de la beca, y finaliza el caso de uso.*|
+|5.*El becado cancela la operación de baja de la beca, y finaliza el caso de uso.*|
 |6.*El sistema indica al becado que faltan completarse datos obligatorios, retornando al punto 2 del flujo tipico de eventos.*|
 |**Precondición:** El becado accedió a su cuenta correctamente.|
 |**Postcondición:** El becado realizó la baja de su beca de albergue con éxito.|
-|**Requerimientos cumplidos:** requerimientos|
+|**Requerimientos cumplidos:** Requerimientos del sistema, apartado 1, item 1.6 SiGAU debe permitir a un becado finalizar su beca, dandose de baja por si mismo cuando no quiera usar mas el albergue.|
 
 ### Caso de Uso: Retirar bienes
 
