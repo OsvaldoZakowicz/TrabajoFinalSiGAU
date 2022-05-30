@@ -99,6 +99,9 @@ volver al [Indice](#indice-de-contenidos)
 |1.4 SiGAU Realizará una preselección de solicitudes de beca según parámetros de selección preestablecidos cuando el período de solicitud finalice.|
 |1.5 SiGAU no debe permitir que se realice una solicitud hasta que se adjunten los documentos requeridos en cada apartado del formulario de solicitud en el formato adecuado.|
 |1.6 SiGAU debe permitir a un becado finalizar su beca, dandose de baja por si mismo cuando no quiera usar mas el albergue.|
+|1.7 SiGAU debe permitir establecer una fecha de inicio y fin para un período de solicitud de beca.|
+|1.8 SiGAU debe proporcionar opciones de preselección de solicitudes parametrizable para facilitar la clasificación de las mismas.|
+|1.9 SiGAU debe permitir al encargado de albergue revocar la beca a un becado en caso del incumplimiento de reglamento de albergues establecido.|
 
 | **Requerimientos del sistema, apartado 2.** |
 |:--------------------------------------------|
@@ -110,6 +113,7 @@ volver al [Indice](#indice-de-contenidos)
 |2.6 SiGAU permitirá registrar por cada casa los bienes presentes en ella, ya sean bienes propios de los albergues o bienes traidos por los becados.|
 |2.7 SiGAU permitirá a un becado retirar sus bienes de la casa en donde esté.|
 |2.8 SiGAU permitirá al encargado de albergues retirar los bienes de una casa que son propiedad de los albrgues.|
+|2.9 SiGAU permitirá reasignar a un becado a otra casa, o intercambiar de casa y/o habitacion a dos becados.|
 
 | **Requerimientos del sistema, apartado 3** |
 |:-------------------------------------------|
@@ -327,7 +331,7 @@ volver al [Indice](#indice-de-contenidos)
 |6.*El sistema detecta que se han enviado datos de una boleta ya registrada como pagada con anterioriad en otro mes, o que faltan datos obligatorios por completarse, o el formato de la documentación adjunta no es el indicado, retornando al punto 4 del flujo tipico de eventos.*|
 |**Precondición:** El delegado ingresó a su cuenta correctamente, existe al menos un servicio pendiente de pago.|
 |**Postcondición:** El delegado registró con éxito el pago ya realizado de un servicio doméstico.|
-|**Requerimientos cumplidos:** |
+|**Requerimientos cumplidos:** *Requerimientos del sistema, apartado 4, item 4.2 Por cada servicio, SiGAU esperará a que al final del período se suban los datos de identificación de la boleta de servicio pagada, para que la planificación del mes se considere cumplida. SiGAU no debe permitir que una planificación de pago se omita al no subir las boletas pagadas.*|
 
 ### Caso de Uso: Establecer cronograma de limpieza
 
@@ -349,23 +353,23 @@ volver al [Indice](#indice-de-contenidos)
 
 ### Caso de Uso: Configurar período de solicitud
 
-|**Nombre del Caso de Uso:** Abrir período de solicitud.|
+|**Nombre del Caso de Uso:** Configurar período de solicitud.|
 |:---|
 |**Actor(es):** Secretario de bienestar estudiantil.|
-|**Descripcion:** Permitir al secretario de bienestar estudiantil configurar el inicio del período de solicitud de becas de albergue y establecer la duración del mismo hasta su cierre.|
-|**Evento desencadenador:** El secretario de bienestar estudiantil accede al apartado de beca para configurar un nuevo periodo de solicitud.|
+|**Descripcion:** Permitir al secretario de bienestar estudiantil configurar el inicio y fin del período de solicitud de becas de albergue.|
+|**Evento desencadenador:** El secretario de bienestar estudiantil accede al apartado de beca para configurar el periodo de solicitud.|
 |**Flujo tipico de eventos (ruta principal):**|
-|1.*Este caso de uso incia cuando el secretario de bienestar estudiantil accede al apartado de beca para configurar un nuevo periodo de solicitud.*|
-|2.*El sistema retorna un formulario de configuración para el nuevo período de solicitud, con fechas de inicio y fin del período, y el comportamiento del sistema al cerrar el período.*|
-|3.*El secretario de bienestar estudiantil establece las fechas de inicio y fin del período, si desea que el sistema preseleccione solicitudes o no al cerrarse.*|
-|4.*El sistema muestra el total de dias que estará disponible el período de solicitud y adicionalmente mostrará una opcion para guardar la configuración como predeterminada si no hay configuraciones guardadas o si desea sobreescribir una configuración anterior*|
-|5.*El secretario de bienestar estudiantil confirma la apertura del período segun las configuraciones enviando el formulario de configuración.*|
+|1.*Este caso de uso incia cuando el secretario de bienestar estudiantil accede al apartado de beca para configurar el periodo de solicitud.*|
+|2.*El sistema retorna un formulario de configuración para el nuevo período de solicitud, con fechas de inicio y fin del período.*|
+|3.*El secretario de bienestar estudiantil establece las fechas de inicio y fin del período.*|
+|4.*El sistema muestra el total de dias que estará disponible el período de solicitud.*|
+|5.*El secretario de bienestar estudiantil confirma la apertura del período enviando el formulario de configuración.*|
 |6.*El sistema verifica que se han completado todos los campos obligatorios, a continuación configura la apertura y cierre de la solicitud de beca, retornando un mensaje de éxito al secretario de bienestar estudiantil, y finaliza el caso de uso.*|
 |**Flujo alternativo de eventos:**|
 |6.*El sistema indica al secretario de bienestar estudiantil que faltan completarse datos obligatorios, retornando al punto 2 del flujo tipico de eventos.*|
 |**Precondición:** El secretario de bienestar estudiantil ingresó a su cuenta correctamente, no existe un período de solicitud de beca abierto con anterioridad que aún no ha cerrado.|
 |**Postcondición:** El secretario de bienestar estudiantil configuró el período de solicitud para su apertura.|
-|**Requerimientos cumplidos:** requerimientos|
+|**Requerimientos cumplidos:** *Requerimientos del sistema, apartado 1, item 1.7 SiGAU debe permitir establecer una fecha de inicio y fin para un período de solicitud de beca.*|
 
 ### Caso de Uso: Configurar preseleccion de solicitudes
 
@@ -384,7 +388,7 @@ volver al [Indice](#indice-de-contenidos)
 |4.*El sistema indica al secretario de bienestar estudiantil que faltan completarse datos obligatorios, retornando al punto 2 del flujo tipico de eventos*|
 |**Precondición:** El scretario de bienestar estudiantil ingresó a su cuenta correctamente.|
 |**Postcondición:** El secretario de bienestar estudiantil configuró los parámetros de preselección de solicitudes del sistema.|
-|**Requerimientos cumplidos:** requerimientos|
+|**Requerimientos cumplidos:** *Requerimientos del sistema, apartado 1, item 1.8 SiGAU debe proporcionar opciones de preselección de solicitudes parametrizable para facilitar la clasificación de las mismas.*|
 
 ### Caso de Uso: Verificar documentacion
 
@@ -392,36 +396,36 @@ volver al [Indice](#indice-de-contenidos)
 |:---|
 |**Actor(es):** Secretario de bienestar estudiantil.|
 |**Descripcion:** Permitir al secretario de bienestar estudiantil verificar la documentación de una solicitud de beca.|
-|**Evento desencadenador:** El secretario de bienestar estudiantil selcciona una solicitud de beca para su análisis.|
+|**Evento desencadenador:** El secretario de bienestar estudiantil selecciona una solicitud de beca para su análisis.|
 |**Flujo tipico de eventos (ruta principal):**|
 |1.*Este caso de uso incia cuando el secretario de bienestar estudiantil selecciona una solicitud para su análisis.*|
 |2.*El sistema retorna los datos de la solicitud y la documentación asociada para su visualización*|
-|3.*Por cada documento visualizado, el secretario de bienestar estudiantil puede marcarlo como aceptado o no y adicionalmente, en caso de que no se acepte el documento, comentando el motivo. Al finalizar, cierra la verificación.*|
+|3.*Por cada documento visualizado, el secretario de bienestar estudiantil puede marcarlo como aceptado o no y adicionalmente de forma obligatoria, en caso de que no se acepte el documento, comentando el motivo. Al finalizar, cierra la verificación.*|
 |4.*El sistema analiza la solicitud, si toda la documentación fue aceptada, la misma se marca como "documentacion verificada", y finaliza el caso de uso.*|
 |**Flujo alternativo de eventos:**|
-|4.*El sistema analiza la solicitud, si existe documentación rechazada solicitar un reenvío de documentación, indicando el motivo de cada documento rechazado y dando una fecha límite de reenvío, y finaliza el caso de uso.*|
+|4.*El sistema analiza la solicitud, si existe documentación rechazada solicita un reenvío de documentación, indicando el motivo de cada documento rechazado y dando una fecha límite de reenvío, y finaliza el caso de uso.*|
 |**Precondición:** El secretario de bienestar estudiantil ingresó correctamente a su cuenta.|
 |**Postcondición:** El secretario de bienestar estudiantil verificó con éxito la documentación asociada a una solicitud.|
-|**Requerimientos cumplidos:** requerimientos|
+|**Requerimientos cumplidos:** - |
 
 ### Caso de Uso: Finalizar análisis de solicitudes
 
-|**Nombre del Caso de Uso:** Finalizar análisis de solicitudes|
+|**Nombre del Caso de Uso:** Finalizar análisis de solicitudes.|
 |:---|
 |**Actor(es):** Secretario de bienestar estudiantil.|
-|**Descripcion:** Permitir al secretario de bienestar estudiantil finalizar el análisis de solicitudes realizando una preselccion de las mismas.|
+|**Descripcion:** Permitir al secretario de bienestar estudiantil finalizar el análisis de solicitudes realizando una preselccion de las mismas según los parámetros preestablecidos.|
 |**Evento desencadenador:** El secretario de bienestar estdiantil accede al apartado de beca y finaliza el análisis de solicitudes|
 |**Flujo tipico de eventos (ruta principal):**|
-|1.*Este caso de uso inicia cuando el secretario de bienestar estdiantil accede al apartado de beca y finaliza el análisis de solicitudes*|
-|2.*El sistema verifica que todas las solicitudes tengan su documentación verificada y todos los pedidos de reenvío hayan vencido, a continuación realiza una preselección de solicitudes y retorna los preseleccionados*|
+|1.*Este caso de uso inicia cuando el secretario de bienestar estudiantil accede al apartado de beca y finaliza el análisis de solicitudes*|
+|2.*El sistema verifica que todas las solicitudes tengan su documentación verificada y todos los pedidos de reenvío se hayan cumplido o hayan vencido, a continuación realiza una preselección de solicitudes y retorna los preseleccionados*|
 |3.*El secretario de bienestar estudiantil confirma la preselección de solicitudes.*|
-|4.*El sistema hace efectiva la preselección de solicitudes, ordenando las solicitudes preseleccionadas en orden de prioridad según sus parámetros, a continuación hace visibles los preseleccionados para el encargado de albergues, y finaliza el caso de uso.*|
+|4.*El sistema hace efectiva la preselección de solicitudes, ordenando las solicitudes preseleccionadas en orden de prioridad según sus características, a continuación hace visibles los preseleccionados para el encargado de albergues, y finaliza el caso de uso.*|
 |**Flujo alternativo de eventos:**|
 |2.*El sistema indica al secretario de bienestar estudiantil que existen solicitudes cuya documentación no ha sido verificada, y finaliza el caso de uso.*|
 |2.*El sistema indica al secretario de bienestar estudiantil que existen solicitudes cuyo período para reenviar documentación no ha finalizado, y finaliza el caso de uso.*|
-|**Precondición:** El secretario de bienestar estudiantil ingresó correctamente a su cuenta, y todas las solicitudes tienen la documentación verificada y/o reenviada.|
+|**Precondición:** El secretario de bienestar estudiantil ingresó correctamente a su cuenta, y todas las solicitudes tienen la documentación verificada.|
 |**Postcondición:** El secretario de binestar estudiantil fnalizó el análisis de solicitudes con una preselección de las mismas.|
-|**Requerimientos cumplidos:** requerimientos|
+|**Requerimientos cumplidos:** *Requerimientos del sistema, apartado 1, item 1.4 SiGAU Realizará una preselección de solicitudes de beca según parámetros de selección preestablecidos cuando el período de solicitud finalice.*|
 
 ### Caso de Uso: Otorgar beca
 
@@ -444,7 +448,7 @@ volver al [Indice](#indice-de-contenidos)
 |6. *El sistema indica que faltan completarse datos obligatorios del formulario, retornando al punto 4 del flujo tipico de eventos.*|
 |**Precondición:** El encargado de albergue accedió correctamente a su cuenta, ya está disponible el listado de preseleccionados, y existen aún lugares disponibles en la beca de albergue.|
 |**Postcondición:** El encargado de albergué asignó una beca a un estudiante, incluyéndolo en una casa y una habitación, descontando de la beca un lugar.|
-|**Requerimientos cumplidos:** requerimientos|
+|**Requerimientos cumplidos:** *Requerimientos del sistema, apartado 2, item 2.2 SiGAU permitirá registrar cada usuario que resulte beneficiado por la beca como un becado en una casa, asignándole habitación y cama, item 2.5 Si ya no existen lugares libres en una casa, SiGAU no debe permitir que se asigue una beca de albergue a un estudiante para dicha casa.*|
 
 ### Caso de Uso: Establecer plazo académico
 
@@ -463,7 +467,7 @@ volver al [Indice](#indice-de-contenidos)
 |4.*El sistema indica que faltan completarse datos obligatorios del formulario, retornando al punto 2 del flujo tipico de eventos.*|
 |**Precondición:** El encargado de albergues accedió correctamente a su cuenta.|
 |**Postcondición:** El encargado de albergues estableció un plazo académico para un becado, renovando provisoriamente la beca hasta el fin del plazo.|
-|**Requerimientos cumplidos:** requerimientos|
+|**Requerimientos cumplidos:** - |
 
 ### Caso de Uso: Cambiar de casa
 
@@ -481,7 +485,7 @@ volver al [Indice](#indice-de-contenidos)
 |4.*El sistema indica que faltan completarse datos obligatorios del formulario, retornando al punto 2 del flujo tipico de eventos.*|
 |**Precondición:** El encargado de albergue accedió a su cuenta correctamente.|
 |**Postcondición:** El encargado de albergue estableció un cambio de lugar para uno o dos becados.|
-|**Requerimientos cumplidos:** requerimientos|
+|**Requerimientos cumplidos:** *Requerimientos del sistema, apartado 2, item 2.9 SiGAU permitirá reasignar a un becado a otra casa, o intercambiar de casa y/o habitacion a dos becados.*|
 
 ### Caso de Uso: Revocar beca
 
@@ -499,7 +503,7 @@ volver al [Indice](#indice-de-contenidos)
 |4.*El sistema indica que faltan completarse datos obligatorios del formulario, retornando al punto 2 del flujo tipico de eventos.*|
 |**Precondición:** El encargado de albergue accedió a su cuenta correctamente.|
 |**Postcondición:** El encargado de albergues revocó la beca de un estudiante.|
-|**Requerimientos cumplidos:** requerimientos|
+|**Requerimientos cumplidos:** *Requerimientos del sistema, apartado 1, item 1.9 SiGAU debe permitir al encargado de albergue revocar la beca a un becado en caso del incumplimiento de reglamento de albergues establecido.*|
 
 ### Caso de Uso: Planificar jornada de mantenimiento
 
@@ -518,7 +522,7 @@ volver al [Indice](#indice-de-contenidos)
 |4. *El sistema indica que faltan completarse datos obligatorios del formulario, retornando al punto 2 del flujo tipico de eventos.*|
 |**Precondición:** El encargado de albergue accedió correctamente a su cuenta.|
 |**Postcondición:** El encargado de albergues planificó una jornada de mantenimiento e incluyó en ella pedidos de mantenimiento a tratar, notificando a los becados.|
-|**Requerimientos cumplidos:** requerimientos|
+|**Requerimientos cumplidos:** *Requerimientos del sistema, apartado 5, item 5.4 SiGAU permitirá que el encargado de albergue planifique jornadas de mantenimiento e incluya en ellas solicitudes de mantenimiento a resolver, luego informará de esto a todos los becados.*|
 
 ### Caso de Uso: Registrar casa
 
@@ -536,7 +540,7 @@ volver al [Indice](#indice-de-contenidos)
 |4. *El sistema indica que faltan completarse datos obligatorios del formulario, retornando al punto 2 del flujo tipico de eventos.*|
 |**Precondición:** El encargado de albergues accedió correctamente a su cuenta.|
 |**Postcondición:** El encargado de albergues registró con éxito una nueva casa para la beca de albergues.|
-|**Requerimientos cumplidos:** requerimientos|
+|**Requerimientos cumplidos:** *Requerimientos del sistema, apartado 2, item 2.1 SiGAU permitirá registrar cada casa de la beca de albergue, el numero de habitaciones y de camas por habitación.*|
 
 ### Caso de Uso: Registrar bienes
 
@@ -554,7 +558,7 @@ volver al [Indice](#indice-de-contenidos)
 |4. *El sistema indica que faltan completarse datos obligatorios del formulario, retornando al punto 2 del flujo tipico de eventos.*|
 |**Precondición:** El encargado de albergues accedió correctamente a su cuenta.|
 |**Postcondición:** El encargado de albergues registró un nuevo bien para una casa.|
-|**Requerimientos cumplidos:** requerimientos|
+|**Requerimientos cumplidos:** *Requerimientos del sistema, apartado 2, item 2.6 SiGAU permitirá registrar por cada casa los bienes presentes en ella, ya sean bienes propios de los albergues o bienes traidos por los becados.*|
 
 ### Caso de Uso: Establecer área de limpieza
 
