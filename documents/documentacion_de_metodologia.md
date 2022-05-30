@@ -113,7 +113,7 @@ volver al [Indice](#indice-de-contenidos)
 
 | **Requerimientos del sistema, apartado 3** |
 |:-------------------------------------------|
-|3.1 SiGAU mantendrá un listado de áreas que deben ser mantenidas limpias para cada casa, su nivel de prioridad, y el plazo de planificación en que debe cumplirse cada tarea.|
+|3.1 SiGAU mantendrá un listado de áreas que deben ser mantenidas limpias para cada casa, su nivel de prioridad y el puntaje obtenible por completar la tarea.|
 |3.2 SiGAU planificará en un calendario para cada becado de cada casa una o mas tareas de limpieza que se deben completar en un tiempo (5, 7, 10 dias).|
 |3.3 SiGAU permitira que cada becado registre la finalización de una tarea asignada y envié una o mas imagenes (fotos) del área o áreas que limpió para que sea calificada por los demás integrantes de la casa  (calificación del 1 "mal" al 10 "perfecto").|
 |3.4 SiGAU replanificará las tareas asignadas en un período de tiempo cuando se incluya un nuevo becado en una casa o cuando se quite un becado de una casa.|
@@ -121,7 +121,7 @@ volver al [Indice](#indice-de-contenidos)
 
 | **Requerimientos del sistema, apartado 4** |
 |:-------------------------------------------|
-|4.1 SiGAU planificará en un calendario para cada casa el período en el que se espera paguen los servicios de luz y agua, este período de timpo va desde el inicio del mes hasta un tiempo aproximado en que llegan las boletas (1 al 15 de cada mes).|
+|4.1 SiGAU planificará en un calendario para cada casa el período en el que se espera paguen los servicios de luz y agua, este período de tiempo va desde el inicio del mes hasta un tiempo aproximado en que llegan las boletas.|
 |4.2 Por cada servicio, SiGAU esperará a que al final del período se suban los datos de identificación de la boleta de servicio pagada, para que la planificación del mes se considere cumplida. SiGAU no debe permitir que una planificación de pago se omita al no subir las boletas pagadas.|
 |4.3 SiGAU no debe permitir que se suban boletas ya registradas, o en un formato inadecuado.|
 
@@ -328,6 +328,24 @@ volver al [Indice](#indice-de-contenidos)
 |**Precondición:** El delegado ingresó a su cuenta correctamente, existe al menos un servicio pendiente de pago.|
 |**Postcondición:** El delegado registró con éxito el pago ya realizado de un servicio doméstico.|
 |**Requerimientos cumplidos:** |
+
+### Caso de Uso: Establecer cronograma de limpieza
+
+|**Nombre del Caso de Uso:** Establecer cronograma de limpieza.|
+|:---|
+|**Actor(es):** Delegado.|
+|**Descripcion:** Permitir al delegado de una casa establecer el inicio del cronograma de limpieza, tareas y la duracion de cada iteracion de limpieza.|
+|**Evento desencadenador:** El delegado ingresa al apartado de cronograma de limpieza de la casa para establecerlo.|
+|**Flujo tipico de eventos (ruta principal):**|
+|1.*Este caso de uso incia cuando el delegado ingresa a el cronograma de limpieza de la casa en donde está.*|
+|2.*El sistema retorna el formulario de configuración del cronograma, y muestra en base a la cantidad de becados de la casa, las taréas obligatorias con las que iniciará el plan, y las tareas extra elegibles.*|
+|3.*El delegado carga la duracion de las iteraciones, y las tareas extra deseables, a continuación envía el formulario.*|
+|4.*El sistema verifica que se han completado los datos obligatorios, a continuación da inicio a la planificacion de tareas de limpieza, y retorna un mensaje de éxito. Finaliza el caso de uso.*|
+|**Flujo alternativo de eventos:**|
+|4.*El sistema indica al actor que faltan completarse datos obligatorios, retornando al punto 3 del flujo tipico de eventos.*|
+|**Precondición:** El delegado ingresó a su cuenta correctamente.|
+|**Postcondición:** El delegado estableció el cronograma de limpieza de la casa a partir del cual el sistema planificará las iteraciones de limpieza para cada becado.|
+|**Requerimientos cumplidos:** *Requerimientos del sistema, apartado 3, item 3.2 SiGAU planificará en un calendario para cada becado de cada casa una o mas tareas de limpieza que se deben completar en un tiempo (5, 7, 10 dias).*|
 
 ### Caso de Uso: Configurar período de solicitud
 
@@ -537,6 +555,42 @@ volver al [Indice](#indice-de-contenidos)
 |**Precondición:** El encargado de albergues accedió correctamente a su cuenta.|
 |**Postcondición:** El encargado de albergues registró un nuevo bien para una casa.|
 |**Requerimientos cumplidos:** requerimientos|
+
+### Caso de Uso: Establecer área de limpieza
+
+|**Nombre del Caso de Uso:** Establecer área de limpieza.|
+|:---|
+|**Actor(es):** Encargado de albergues.|
+|**Descripcion:** Permitir al ancargado de albergues definir un área que debe ser limpiada en cada iteración de limpieza planificada, proporcionando un nombre, prioridad del trabajo, y un puntaje obtenible por realizar la tarea.|
+|**Evento desencadenador:** El encargado de albergue accede al apartado de casas y a continuación a áreas de limpieza para crear una nueva área.|
+|**Flujo tipico de eventos (ruta principal):**|
+|1.*Este caso de uso incia cuando el encargado de albergues accede a crear una nueva área de limpieza.*|
+|2.*El sistema retorna un formulario de registro para un área de limpieza.*|
+|3.*El encargado de albergue completa el formulario con la nueva área de limpieza, a continuación envía el formulario.*|
+|4.*El sistema verifica que se han proporcionado todos los datos obligatorios del formulario. A continuación crea un area de limpieza, y finaliza el caso de uso.*|
+|**Flujo alternativo de eventos:**|
+|4.*El sistema indica que faltan completarse datos obligatorios del formulario, retornando al punto 2 del flujo tipico de eventos.*|
+|**Precondición:** El encargado de albergue ingresó correctamente a su cuenta.|
+|**Postcondición:** El encargado de albergue definió un área de limpieza nueva con éxito.|
+|**Requerimientos cumplidos:** *Requerimientos del sistema, apartado 3, item 3.1 SiGAU mantendrá un listado de áreas que deben ser mantenidas limpias para cada casa, su nivel de prioridad y el puntaje obtenible por completar la tarea.*|
+
+### Caso de Uso: Configurar calendario de pagos
+
+|**Nombre del Caso de Uso:** Configurar calendario de pagos.|
+|:---|
+|**Actor(es):** Encargado de albergues.|
+|**Descripcion:** Permitir al encargado de albergues configurar el calendario de pagos de servicios domésticos para que el sistema realice el seguimiento.|
+|**Evento desencadenador:** El encargado de albergues accede al apartado de casas y a la configuración del calendario de pagos.|
+|**Flujo tipico de eventos (ruta principal):**|
+|1.*Este caso de uso incia cuando el encargado de albergue accede al apartado de casas y a la configuración del calendario de pagos.*|
+|2.*El sistema retorna un formulario de configuración del calendario de servicios.*|
+|3.*El encargado de albergue elige los servicios, configura el plazo de pago por mes, la frecuencia de notificaciones del seguimiento y el puntaje obtenible por el pago a tiempo o fuera de tiempo, a continuación envía el formulario.*|
+|4.*El sistema verifica que se han proporcionado todos los datos obligatorios del formulario. A continuación guarda la configuración retornando un mensaje de éxito, y finaliza el caso de uso.*|
+|**Flujo alternativo de eventos:**|
+|4.*El sistema indica que faltan completarse datos obligatorios del formulario, retornando al punto 2 del flujo tipico de eventos.*|
+|**Precondición:** El encargado de albergues ingresó correctamente a su cuenta.|
+|**Postcondición:** El encargado de albergues configuró el seguimiento de pago de servicios correctamente.|
+|**Requerimientos cumplidos:** *Requerimientos del sistema, apartado 4, item 4.1 SiGAU planificará en un calendario para cada casa el período en el que se espera paguen los servicios de luz y agua, este período de tiempo va desde el inicio del mes hasta un tiempo aproximado en que llegan las boletas.*|
 
 ### Titulo 3
 
